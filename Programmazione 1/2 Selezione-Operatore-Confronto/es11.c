@@ -21,7 +21,6 @@
     I messaggi vanno scritti come negli esempi sotto, in particolare
     le banconote emesse vanno stampate solo quando il numero e' diverso da 0.
 */
-
 #include <stdio.h>
 
 void main(){
