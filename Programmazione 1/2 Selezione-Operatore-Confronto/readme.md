@@ -89,7 +89,7 @@ void main(){
     printf("\nInserisci n2: ");
     scanf("%d", &n2); 
 
-    if(a%b == 0){
+    if(a % b == 0){
         printf("b e' multiplo a a");
 		
     }else{
@@ -117,7 +117,7 @@ void main(){
     printf("Inserisci X: ");
     scanf("%d", &x); 
 
-    if(x==0 || x>0){
+    if(x == 0 || x > 0){
         printf("Il valore di x e' positivo %d", x);
 		
     }else{
@@ -178,10 +178,10 @@ void main(){
     printf("Inserisci N3: ");
     scanf("%d", &n3);
 
-    if(n1>n2 && n1 > n3){
+    if(n1 > n2 && n1 > n3){
         printf("Il numero maggiore e' N1");
 		
-    }else if(n2>n1 && n2>n3){
+    }else if(n2 > n1 && n2 > n3){
         printf("Il numero maggiore e' N2");
 		
     }else{
@@ -248,16 +248,16 @@ void main(){
     printf("inserisci n2\n");
     scanf(" %d", &n2);
 
-    if(operatore=='+'){
+    if(operatore == '+'){
         risultato = n1+n2;
 	
-    }else if(operatore=='-'){
+    }else if(operatore == '-'){
         risultato = n1-n2;
 	
-    }else if(operatore=='*'){
+    }else if(operatore == '*'){
         risultato = n1*n2;
 	
-    }else if(operatore=='/'){
+    }else if(operatore == '/'){
         risultato = n1/n2;
 	
     }else{
@@ -274,7 +274,7 @@ void main(){
 
 > ## 9 Scrivere un programma che prenda in input il valore di una casa e il codice della zona in cui si trova (1, 2, 3 o 4).
 > -	Il programma deve calcolare la tassa di proprieta' come percentuale del valore della casa. 
-> -	In zona 1, la percentuale e' 5%. 
+> -		In zona 1, la percentuale e' 5%. 
 > -     In zona 2, la percentuale e' 10%.
 > -     In zona 3, la percentuale e' 15%. 
 > -     In zona 4, la percentuale e' 20%.
@@ -299,15 +299,15 @@ void main(){
     if(zona > 4 || zona < 1){
         printf("codice non valido ");
 	
-    }else if(zona==1){
+    }else if(zona == 1){
         valore = (casa * 1.05);
         printf("il valore della casa e' di %f:", &valore);
 
-    }else if(zona==2){
+    }else if(zona == 2){
         valore = (casa * 1.10);
         printf("il valore della casa e' di %f:", &valore);
 
-    }else if(zona==3){
+    }else if(zona == 3){
         valore = (casa * 1.15);
         printf("il valore della casa e' di %f:", &valore);
 
@@ -320,3 +320,134 @@ void main(){
 ```
 
 <hr/>
+
+> ## 10) Scrivere un programma che dati in input i coefficienti a, b, c di una equazione di 2° grado, calcola il discriminante Delta=(b*b - 4*a*c).
+> -	Se Delta<0 il programma visualizza "nessuna soluzione".  
+> -	In zona 1, la percentuale e' 5%. 
+> - Se Delta=0 il programma calcola e visualizza l'unica soluzione dell'equazione x=-b / (2*a)
+> -	Se Delta>0 il programma calcola e visualizza le due soluzioni dell'equazione:
+> - 	x1=( -b + sqrt(b*b - 4*a*c) ) / (2*a)
+> -		x2=( -b - sqrt(b*b - 4*a*c) ) / (2*a)
+> Includere la libreria math.h per poter utilizzare la funzione sqrt (radice quadrata).
+> 
+```c
+#include <stdio.h>
+#include <math.h>
+
+void main(){
+
+    int a = 0;
+	int b = 0;
+	int c = 0;
+    int x = 0;
+	
+    float x1 = 0;
+    float x2 = 0;
+    float delta = 0;
+    float eq = 0;
+
+
+    puts("Inserisci il valore di a: ");
+    scanf("%d", &a); 
+
+    puts("Inserisci il valore di b: ");
+    scanf("%d", &b); 
+
+    puts("Inserisci il valore di c: ");
+    scanf("%d", &c); 
+
+    delta = (b*b) - 4*(a*c);
+    printf("Il valore di delta  e' %f: \n", delta);
+    
+    if(delta < 0){   
+        puts("Nessuna soluzione\n");
+
+    }else if(delta == 0){
+        x = (b*-1) / (2*a);
+
+    }else{
+        x1 = (b*-1) + sqrt((b*b) - 4*(a*c)) / (2*a);
+        x2 = (b*-1) - sqrt((b*b) - 4*(a*c)) / (2*a);
+
+        printf("la soluzione x1 e' %f, mentre quella di x2 e' %f: ", x1, x2);
+    }    
+}
+```
+
+<hr/>
+
+
+> ## 11)  Un bancomat soddisfa una richiesta di prelievo di una somma di denaro adottando la seguente strategia:
+> -	Emette  fin che puo' banconote da 50 (ossia, emette banconote da 50 fin tanto che il totale non supera la somma richiesta).  
+> - Quando ha terminato con le banconote da 50, emette fin che puo' banconote da 20.
+>  Scrivere un programma che chiede all'utente di inserire la somma richiesta (un intero), calcola quante banconote da 50 e 20 verranno emesse e il totale corrispondente ai soldi emessi.
+> -	I messaggi vanno scritti come negli esempi sotto, in particolare le banconote emesse vanno stampate solo quando il numero e' diverso da 0.
+> 
+> 		somma -->  500
+> 		banconote da 50: 10
+> 		Somma erogata: 500
+> 
+> 		somma -->  290
+> 		banconote da 50: 5
+> 		banconote da 20: 2
+> 		Somma erogata: 290
+> 
+> 		somma -->  40
+> 		banconote da 20: 2
+> 		Somma erogata: 40
+> 
+> 		somma -->  595
+> 		banconote da 50: 11
+> 		banconote da 20: 2
+> 		Somma erogata: 590
+> 		
+> 		somma -->  48
+> 		banconote da 20: 2
+> 		Somma erogata: 40 
+> 
+```c
+#include <stdio.h>
+#include <math.h>
+
+void main(){
+
+    int a = 0;
+	int b = 0;
+	int c = 0;
+    int x = 0;
+	
+    float x1 = 0;
+    float x2 = 0;
+    float delta = 0;
+    float eq = 0;
+
+
+    puts("Inserisci il valore di a: ");
+    scanf("%d", &a); 
+
+    puts("Inserisci il valore di b: ");
+    scanf("%d", &b); 
+
+    puts("Inserisci il valore di c: ");
+    scanf("%d", &c); 
+
+    delta = (b*b) - 4*(a*c);
+    printf("Il valore di delta  e' %f: \n", delta);
+    
+    if(delta < 0){   
+        puts("Nessuna soluzione\n");
+
+    }else if(delta == 0){
+        x = (b*-1) / (2*a);
+
+    }else{
+        x1 = (b*-1) + sqrt((b*b) - 4*(a*c)) / (2*a);
+        x2 = (b*-1) - sqrt((b*b) - 4*(a*c)) / (2*a);
+
+        printf("la soluzione x1 e' %f, mentre quella di x2 e' %f: ", x1, x2);
+    }    
+}
+```
+
+<hr/>
+
