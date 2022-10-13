@@ -15,15 +15,17 @@ Area = (area calcolata)
 #include <stdio.h>
 
 void main(){
-    int x, y, h;
-    float area;
+
+    int x = 0;
+    int y = 0;
+    int h = 0;
+    float area = 0;
 
     x = 7;
     y = 3;
     h = 5;
 
-    area = ((x+y) * h)  / 2;
+    area = ( (x+y) * h)  / 2;
 
     printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
-
 }
