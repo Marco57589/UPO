@@ -10,10 +10,10 @@
 
 void main(){
 
-    int n1;
-    int n2;
-    float risultato;
-    char operatore;
+    int n1 = 0;
+    int n2 = 0;
+    float risultato = 0;
+    char operatore = '';
 
     printf("inserisci n1\n");
     scanf(" %d", &n1);
@@ -24,22 +24,22 @@ void main(){
     printf("inserisci n2\n");
     scanf(" %d", &n2);
 
-    if(operatore=='+'){
+    if(operatore == '+'){
         risultato = n1+n2;
-    }else if(operatore=='-'){
+	
+    }else if(operatore == '-'){
         risultato = n1-n2;
-    }else if(operatore=='*'){
+	
+    }else if(operatore == '*'){
         risultato = n1*n2;
-    }else if(operatore=='/'){
+	
+    }else if(operatore == '/'){
         risultato = n1/n2;
+	
     }else{
         printf("operatore non valido");
+	
     }
 
-    printf("Il risultato e': %f", risultato);
-
-
-
-    
+    printf("Il risultato e': %f", risultato);    
 }
-
