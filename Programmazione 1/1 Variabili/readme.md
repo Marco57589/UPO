@@ -54,9 +54,9 @@ void main(){
 > -   Calcoli l'area del rettangolo di lati x e y;
 > -   Stampi a video le misure dei lati e l'area del rettangolo in modo che l'output abbia la forma seguente:
 >
-> >  Lato1 = (valore di x)
-> >  Lato2 = (valore di y)
-> >  Area = (area calcolata)
+> +  Lato1 = (valore di x).
+> +  Lato2 = (valore di y).
+> +  Area = (area calcolata).
 >	
 ```c
 #include <stdio.h>
@@ -84,10 +84,10 @@ void main(){
 > -   Calcoli l'area del trapezio di basi x e y e altezza h;
 > -   Stampi a video le misure delle basi e dell'altezza e l'area del trapezio in modo che abbia la forma seguente:
 > 
-> >	Base1 = (valore di x)
-> >	Base2 = (valore di y)
-> > 	Altezza = (valore di h)
-> >	Area = (area calcolata)
+> +	Base1 = (valore di x).
+> +	Base2 = (valore di y).
+> + 	Altezza = (valore di h).
+> +	Area = (area calcolata).
 >
 ```c
 #include <stdio.h>
