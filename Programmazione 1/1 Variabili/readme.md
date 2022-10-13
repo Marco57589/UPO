@@ -175,15 +175,15 @@ void main(){
     printf("Inserisci num4:");
     scanf("%f", &num4);
 	
-	//Metodo 1:
+//Metodo 1:
     somma = num1+num2+num3+num4;
     media = (somma / 4);
     prodotto = num1 * num2 * num3 * num4;
  
     printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
 	
-	//Metodo 2:
-	printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
+//Metodo 2:
+    printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
 
 }
 ```
