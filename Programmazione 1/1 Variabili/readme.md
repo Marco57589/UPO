@@ -31,7 +31,7 @@ because they require Google Drive authorization.
 > -   Assegni alle variabili i valori 7 e 3.
 > -   Stampi a video i valori di x e y e il loro prodotto.
 
-
+<hr/>
 
 ```c
 #include <stdio.h>
@@ -47,3 +47,5 @@ void main(){
 	printf("Prodotto: %d", x * y);
 }
 ```
+
+<hr/>
