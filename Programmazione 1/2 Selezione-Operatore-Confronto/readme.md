@@ -407,47 +407,34 @@ void main(){
 > 
 ```c
 #include <stdio.h>
-#include <math.h>
 
 void main(){
 
-    int a = 0;
-	int b = 0;
-	int c = 0;
-    int x = 0;
-	
-    float x1 = 0;
-    float x2 = 0;
-    float delta = 0;
-    float eq = 0;
+    int richiesta = 0;
+    int b5 = 0; //banconote 50
+    int b2 = 0; //banconote 20
+    int aus = 0; //variabile ausiliaria
 
+    puts("Inserisci la somma da prelevare: ");
+    scanf("%d", &richiesta); 
 
-    puts("Inserisci il valore di a: ");
-    scanf("%d", &a); 
-
-    puts("Inserisci il valore di b: ");
-    scanf("%d", &b); 
-
-    puts("Inserisci il valore di c: ");
-    scanf("%d", &c); 
-
-    delta = (b*b) - 4*(a*c);
-    printf("Il valore di delta  e' %f: \n", delta);
+    b5 = richiesta / 50;
+    aus = richiesta-(b5*50);
+    b2 = aus / 20;
     
-    if(delta < 0){   
-        puts("Nessuna soluzione\n");
-
-    }else if(delta == 0){
-        x = (b*-1) / (2*a);
-
-    }else{
-        x1 = (b*-1) + sqrt((b*b) - 4*(a*c)) / (2*a);
-        x2 = (b*-1) - sqrt((b*b) - 4*(a*c)) / (2*a);
-
-        printf("la soluzione x1 e' %f, mentre quella di x2 e' %f: ", x1, x2);
-    }    
+    printf("Somma richiesta %d banconote da 50 => %d banconote da 20 => %d", richiesta, b5, b2);        
 }
 ```
+
+<hr/>
+
+> ## 12 Ripetere gli esercizi 8 e 9 usando il costrutto switch (selezione multipla).
+
+
+<hr/>
+
+> ## 13 Scrivere un programma che legge da tastiera un mese espresso come numero (da 1 a 12), e restituisce il numero di giorni in quel mese. Utilizzare il costrutto switch aggregando i casi con lo stesso esito.
+
 
 <hr/>
 
