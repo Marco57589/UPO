@@ -10,21 +10,18 @@
 
 void main(){
 
-    int raggio;
-    float area;
+    int raggio = 0;
+    float area = 0;
 
     printf("Inserisci il raggio: ");
     scanf("%d", &raggio); 
-  
 
     if(raggio > 0){
         area = (raggio*raggio) * pg;
         printf("L'area della circonferenza e' %f ", area);
+	
     }else{
         printf("Il raggio deve essere maggiore di 0");
-    }
-
-
-
+	
+    }    
 }
-
