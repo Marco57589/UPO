@@ -20,22 +20,24 @@ $ ./file_name
 
 void main(){
 
-    int b = 0;
-    int h = 0;
-    float area;
-    
-    printf("inserisci h: ");
-    scanf("%d", b);
-    printf("inserisci b: ");
-    scanf("%d", b);
+	int b = 0;
+	int h = 0;
+	float area;
+
+	printf("inserisci h: ");
+	scanf("%d", b);
+	printf("inserisci b: ");
+	scanf("%d", b);
 
 
-    if(b>0 && h>0){
-        area = b*h;
-        printf("l'area del triangolo e': %f", area);
-    }else{
-        puts("errore");
-    }
+	if(b>0 && h>0){
+		area = b*h;
+		printf("l'area del triangolo e': %f", area);
+		
+	}else{
+		puts("errore");
+		
+	}
 
 }
 ```
