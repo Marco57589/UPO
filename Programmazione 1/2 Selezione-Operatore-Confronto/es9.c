@@ -10,13 +10,11 @@
 
 #include <stdio.h>
 
-#define pg 3.14
-
 void main(){
 
-    float casa;
-    float valore;
-    int zona;
+    float casa = 0;
+    float valore = 0;
+    int zona = 0;
 
     printf("Inserisci il valore della casa: ");
     scanf("%f", &casa); 
@@ -26,15 +24,16 @@ void main(){
 
     if(zona > 4 || zona < 1){
         printf("codice non valido ");
-    }else if(zona==1){
+	
+    }else if(zona == 1){
         valore = (casa * 1.05);
         printf("il valore della casa e' di %f:", &valore);
 
-    }else if(zona==2){
+    }else if(zona == 2){
         valore = (casa * 1.10);
         printf("il valore della casa e' di %f:", &valore);
 
-    }else if(zona==3){
+    }else if(zona == 3){
         valore = (casa * 1.15);
         printf("il valore della casa e' di %f:", &valore);
 
@@ -42,9 +41,5 @@ void main(){
         valore = (casa * 1.20);
         printf("il valore della casa e' di %f:", &valore);
 
-    }
-
-
-    
+    }    
 }
-
