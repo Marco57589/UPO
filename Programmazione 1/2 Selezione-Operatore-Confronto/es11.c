@@ -26,11 +26,10 @@
 
 void main(){
 
-    int richiesta;
-    int b5;
-    int b2;
-    int aus;
-    richiesta = 0;
+    int richiesta = 0;
+    int b5 = 0; //banconote 50
+    int b2 = 0; //banconote 20
+    int aus = 0; //variabile ausiliaria
 
     puts("Inserisci la somma da prelevare: ");
     scanf("%d", &richiesta); 
@@ -38,7 +37,6 @@ void main(){
     b5 = richiesta / 50;
     aus = richiesta-(b5*50);
     b2 = aus / 20;
-    printf("Somma richiesta %d banconote da 50 => %d banconote da 20 => %d", richiesta, b5, b2);
-        
+    
+    printf("Somma richiesta %d banconote da 50 => %d banconote da 20 => %d", richiesta, b5, b2);        
 }
-
