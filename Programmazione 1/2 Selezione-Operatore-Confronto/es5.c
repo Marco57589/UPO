@@ -6,21 +6,22 @@
 
 void main(){
 
-    int x;
+    int x = 0;
 
-    printf("Inserisci X: ");
-    scanf("%d", &x); 
+    printf("Inserisci N: ");
+    scanf("%d", &n); 
 
-    if(x>-1){
-        printf("Il valore di x e' positivo\n");
-        if(x==0){
-            printf("Il valore di x e' nullo\n");
+    if(n >- 1){
+        printf("Il valore di n e' positivo\n");
+		
+        if(n == 0){
+            printf("Il valore di n e' nullo\n");
         }
     }
   
-    if(x<0){
-        printf("Il valore di x e' negativo\n");
+    if(n < 0){
+        printf("Il valore di n e' negativo\n");
+		
     }
 
 }
-
