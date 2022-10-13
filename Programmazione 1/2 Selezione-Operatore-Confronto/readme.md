@@ -436,4 +436,3 @@ void main(){
 > ## 13 Scrivere un programma che legge da tastiera un mese espresso come numero (da 1 a 12), e restituisce il numero di giorni in quel mese. Utilizzare il costrutto switch aggregando i casi con lo stesso esito.
 
 <hr/>
-
