@@ -5,19 +5,21 @@
 */
 
 #include <stdio.h>
+#include <stdio.h>
 
 void main(){
 
-    int x;
+    int x = 0;
 
     printf("Inserisci X: ");
     scanf("%d", &x); 
 
-    if(x==0 || x>0){
+    if(x == 0 || x > 0){
         printf("Il valore di x e' positivo %d", x);
+		
     }else{
         printf("Il valore di x e' negativo %d", x);
+		
     }
 
 }
-
