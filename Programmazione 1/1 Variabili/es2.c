@@ -14,13 +14,15 @@ Area = (area calcolata)
 #include <stdio.h>
 
 void main(){
-    int x, y;
 
-    x = 7;
-    y = 3;
+    int x = 0;
+    int y = 0;
+    int area = 0;
 
-    int area = x * y;
+    x = 5;
+    y = 4;
+
+    area = x * y;
 
     printf("LatoX: %d \nLatoY: %d \nArea %d\n", x, y, area);
-
 }
