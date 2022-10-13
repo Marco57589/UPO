@@ -35,13 +35,13 @@ because they require Google Drive authorization.
 #include <stdio.h>
 
 void main(){
-    int x = 0;
+	
+    	int x = 0;
 	int y = 0;
+	
+	x = 7;
+	y = 3;
 
-    x = 7;
-    y = 3;
-
-    printf("Prodotto: %d", x * y);
-
+	printf("Prodotto: %d", x * y);
 }
 ```
