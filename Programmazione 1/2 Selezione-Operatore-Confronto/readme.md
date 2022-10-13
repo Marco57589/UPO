@@ -104,7 +104,7 @@ void main(){
 
 > ## 4 Si realizzi un programma in linguaggio C che acquisisca da tastiera un numero e stampi il valore assoluto di tale numero.
 > -	Se il numero x inserito e' positivo o nullo, basta visualizzare x. 
-> - Se il numero inserito e' negativo, bisogna visualizzare -x.  
+> - 	Se il numero inserito e' negativo, bisogna visualizzare -x.  
 > 
 
 ```c
@@ -190,3 +190,133 @@ void main(){
     }
 }
 ```
+
+> ## 7  Scrivere un programma che prenda in input il raggio di una circonferenza. 
+> -	Se il raggio e' maggiore di 0, allora il programma calcola e visualizza il valore della circonferenza e dell'area del cerchio. 
+> -	Altrimenti visualizza il messaggio "il raggio deve essere maggiore di 0". 
+> 
+
+```c
+#include <stdio.h>
+
+#define pg 3.14
+
+void main(){
+
+    int raggio = 0;
+    float area = 0;
+
+    printf("Inserisci il raggio: ");
+    scanf("%d", &raggio); 
+
+    if(raggio > 0){
+        area = (raggio*raggio) * pg;
+        printf("L'area della circonferenza e' %f ", area);
+	
+    }else{
+        printf("Il raggio deve essere maggiore di 0");
+	
+    }    
+}
+```
+
+<hr/>
+
+> ## 8  Scrivere un programma che prenda in input due valori e un operatore.
+> -	Se l'operatore e' + allora calcola e visualizza la somma dei valori.  
+> -	Se l'operatore e' - allora calcola e visualizza la differenza dei valori.  
+> -	Se l'operatore e' * allora calcola e visualizza il prodotto dei valori. 
+> -	Se l'operatore e' / allora calcola e visualizza la divisione del primo valore per il secondo. 
+> -	Se l'operatore e' diverso dai precedenti, allora visualizza il messaggio "operatore sconosciuto".   
+
+```c
+#include <stdio.h>
+
+void main(){
+
+    int n1 = 0;
+    int n2 = 0;
+    float risultato = 0;
+    char operatore = '';
+
+    printf("inserisci n1\n");
+    scanf(" %d", &n1);
+
+    printf("inserisci operatore\n");
+    scanf(" %c", &operatore);
+
+    printf("inserisci n2\n");
+    scanf(" %d", &n2);
+
+    if(operatore=='+'){
+        risultato = n1+n2;
+	
+    }else if(operatore=='-'){
+        risultato = n1-n2;
+	
+    }else if(operatore=='*'){
+        risultato = n1*n2;
+	
+    }else if(operatore=='/'){
+        risultato = n1/n2;
+	
+    }else{
+        printf("operatore non valido");
+	
+    }
+
+    printf("Il risultato e': %f", risultato);    
+}
+```
+
+<hr/>
+
+
+> ## 9 Scrivere un programma che prenda in input il valore di una casa e il codice della zona in cui si trova (1, 2, 3 o 4).
+> -	Il programma deve calcolare la tassa di proprieta' come percentuale del valore della casa. 
+> -	In zona 1, la percentuale e' 5%. 
+> -     In zona 2, la percentuale e' 10%.
+> -     In zona 3, la percentuale e' 15%. 
+> -     In zona 4, la percentuale e' 20%.
+> -	Se l'operatore e' diverso dai precedenti, allora visualizza il messaggio "operatore sconosciuto".   
+> Il programma deve visualizzare l'importo della tassa se la zona varia tra 1 e 4, altrimenti un messaggio di errore.
+> 
+```c
+#include <stdio.h>
+
+void main(){
+
+    float casa = 0;
+    float valore = 0;
+    int zona = 0;
+
+    printf("Inserisci il valore della casa: ");
+    scanf("%f", &casa); 
+
+    printf("Inserisci il codice della zona: "); 
+    scanf("%d", &zona); 
+
+    if(zona > 4 || zona < 1){
+        printf("codice non valido ");
+	
+    }else if(zona==1){
+        valore = (casa * 1.05);
+        printf("il valore della casa e' di %f:", &valore);
+
+    }else if(zona==2){
+        valore = (casa * 1.10);
+        printf("il valore della casa e' di %f:", &valore);
+
+    }else if(zona==3){
+        valore = (casa * 1.15);
+        printf("il valore della casa e' di %f:", &valore);
+
+    }else{
+        valore = (casa * 1.20);
+        printf("il valore della casa e' di %f:", &valore);
+
+    }    
+}
+```
+
+<hr/>
