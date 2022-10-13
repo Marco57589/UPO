@@ -3,7 +3,7 @@
 
 ## Compilazione file c
 ```
-$ gcc file_name.c
+$ gcc file_name.c -lm
 ```
 ## Esecuzione
 ```
