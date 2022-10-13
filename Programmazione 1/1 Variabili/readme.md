@@ -26,8 +26,6 @@ because they require Google Drive authorization.
 | `npm run push:static` | just HTML & CSS |
 | `npm run push` | everything |
 
-# Google Apps Script Resources
-
 
 # 1
 
