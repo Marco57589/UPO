@@ -182,7 +182,7 @@ void main(){
  
     printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
 	
-//Metodo 2:
+//Metodo 2 (Senza creazione variabili dedicate):
     printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
 
 }
