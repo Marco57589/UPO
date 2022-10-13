@@ -18,19 +18,20 @@ dell'altezza (float) utilizzando il metodo scanf.
 #include <stdio.h>
 
 void main(){
-
-    float x, y, h, area;
-
-    printf("Inserisci X:");
+	
+    float x = 0;
+    float y = 0;
+    float h = 0;
+    float area = 0;
+    
+    printf("Inserisci lato 1:");
     scanf("%f", &x);
-    printf("Inserisci Y:");
+    printf("Inserisci lato 2:");
     scanf("%f", &y);
     printf("Inserisci H:");
     scanf("%f", &h);
 
-    area = ((x+y) * h)  / 2;
+    area = ( (x+y) * h)  / 2;
 
-  
-    printf("Base1: %f \nBase2Y: %f \nAltezza %f\nArea: %f", x, y, h, area);
-
+    printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
 }
