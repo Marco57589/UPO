@@ -8,8 +8,9 @@ inverso.
 #include <stdio.h>
 
 void main(){
-
-    float num1, num2;
+	
+    float num1 = 0;
+    float num2 = 0;
 
     printf("Inserisci num1:");
     scanf("%f", &num1);
@@ -17,5 +18,4 @@ void main(){
     scanf("%f", &num2);
 
     printf("Num2: %f \nNum1: %f", num2, num1);
-
 }
