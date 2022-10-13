@@ -19,6 +19,7 @@ $ ./file_name
 #include <stdio.h>
 
 void main(){
+
     int b = 0;
     int h = 0;
     float area;
@@ -60,6 +61,7 @@ void main(){
 #include <stdio.h>
 
 void main(){
+
 	int l1 = 0;
 	int l2 = 0;
     float area = 0;
@@ -102,6 +104,7 @@ void main(){
 #include <stdio.h>
 
 void main(){
+
 	int b1 = 0;
 	int b2 = 0;
 	int h = 0
