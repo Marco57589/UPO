@@ -59,9 +59,11 @@ void main(){
 		
     }else{
         if(n1 > n2){
-            printf("N1 e' maggiore di N2");	
+            
+	    printf("N1 e' maggiore di N2");	
         }else{
-            printf("N2 e' maggiore di N1");			
+            printf("N2 e' maggiore di N1");
+	    
         }
 	
     }
@@ -165,7 +167,9 @@ void main(){
 
 void main(){
 
-    int n1, n2, n3;
+    int n1 = 0;
+	int n2 = 0;
+	int n3 = 0;
 
     printf("Inserisci N1: ");
     scanf("%d", &n1); 
@@ -176,10 +180,13 @@ void main(){
 
     if(n1>n2 && n1 > n3){
         printf("Il numero maggiore e' N1");
+		
     }else if(n2>n1 && n2>n3){
         printf("Il numero maggiore e' N2");
+		
     }else{
         printf("Il numero maggiore e' N3");
+		
     }
 }
 ```
