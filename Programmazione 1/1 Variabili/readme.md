@@ -1,15 +1,17 @@
-# Contributing
+# 1) Variabili
 
-## Setup
 
-```
-$ npm install
-```
 
 ## Building
 
 ```
-$ npm run build
+$ gcc file_name.c
+```
+
+## Run
+
+```
+$ ./file_name
 ```
 
 ## Pushing Changes
