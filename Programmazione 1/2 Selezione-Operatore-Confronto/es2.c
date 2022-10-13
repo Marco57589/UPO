@@ -6,7 +6,8 @@
 
 void main(){
 
-    int n1, n2;
+    int n1 = 0;
+    int n2 = 0;
 
     printf("Inserisci N1: ");
     scanf("%d", &n1); 
@@ -15,13 +16,16 @@ void main(){
 
     if(n1 == n2){
         printf("N1 e' uguale a N2");
+		
     }else{
         if(n1 > n2){
-            printf("N1 e' maggiore di N2");
-
+            
+	        printf("N1 e' maggiore di N2");	
         }else{
             printf("N2 e' maggiore di N1");
+	    
         }
+	
     }
 
 }
