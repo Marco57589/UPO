@@ -13,24 +13,27 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1  Scrivere un programma che dato un numero intero in input, visualizza se il numero e' pari o dispari. 
-
+> ## 1  Scrivere un programma che prenda in input la base e l'altezza di un triangolo. 
+>	Se entrambi sono maggiori di 0, allora calcola e visualizza l'area del triangolo altrimenti visualizza un messaggio di errore.
 ```c
 #include <stdio.h>
-#include <math.h>
 
 void main(){
+    int b = 0;
+    int h = 0;
+    float area;
+    
+    printf("inserisci h: ");
+    scanf("%d", b);
+    printf("inserisci b: ");
+    scanf("%d", b);
 
-    int n = 0;
 
-    printf("Inserisci N: ");
-    scanf("%d", &n); 
-
-    if(n%2 == 0){
-        printf("Il numero inserito e' pari");
-
+    if(b>0 && h>0){
+        area = b*h;
+        printf("l'area del triangolo e': %f", area);
     }else{
-        printf("Il numero inserito e' dispari");
+        puts("errore");
     }
 
 }
@@ -38,8 +41,20 @@ void main(){
 
 <hr/>
 
-> ## 2 Scrivere un programma che dati in input due valori visualizzi il maggiore. 
-> 
+> ## 2  Scrivere un programma C che esegua le seguenti operazioni:
+> - Legga da tastiera due variabili x e y.
+>		
+> Se x e y sono entrambi maggiori di 0, allora
+> - Calcoli l'area del rettangolo di lati x e y.
+> - Stampi a video le misure dei lati e l'area del rettangolo in modo che l'output abbia la forma seguente:
+>```
+>	Lato1 = (valore di x)
+>	Lato2 = (valore di y)
+>	Area = (area calcolata)
+>```
+> Altrimenti
+> - Visualizzi un messaggio di errore. 
+>
 
 ```c
 #include <stdio.h>
