@@ -18,9 +18,9 @@ void main(){
         printf("N1 e' uguale a N2");
 		
     }else{
-        if(n1 > n2){
-            
-	        printf("N1 e' maggiore di N2");	
+        if(n1 > n2){            
+	    printf("N1 e' maggiore di N2");
+		
         }else{
             printf("N2 e' maggiore di N1");
 	    
