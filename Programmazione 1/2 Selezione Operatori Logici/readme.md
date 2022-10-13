@@ -66,7 +66,7 @@ void main(){
 
 	int l1 = 0;
 	int l2 = 0;
-    float area = 0;
+	float area = 0;
 	
 	print("inserire l1");
 	scanf("%d",&l1);
@@ -74,8 +74,8 @@ void main(){
 	scanf("%d",&l2);
 	
 	if(l1 > 0 && l2 > 0){
-	  area = l1 * l2;
-	  printf("Lato1 = %d \n Lato2 = %d \n Area = %f  ",l1, l2, area);
+		area = l1 * l2;
+		printf("Lato1 = %d \n Lato2 = %d \n Area = %f  ",l1, l2, area);
 
 	}else{
 		printf("errore")
@@ -109,8 +109,8 @@ void main(){
 
 	int b1 = 0;
 	int b2 = 0;
-	int h = 0
-    float area = 0;
+	int h = 0;
+	float area = 0;
 	
 	print("inserire b1");
 	scanf("%d",&b1);
@@ -120,8 +120,8 @@ void main(){
 	scanf("%d",&h);
 	
 	if(l1 > 0 && l2 > 0 && h > 0){
-	  area = ( (x+y) * h)  / 2;
-	  printf("Base1 = %d \n Base2 = %d \n Altezza = %d \n Area = %f ",b1, b2, h, area);
+		area = ( (x+y) * h)  / 2;
+		printf("Base1 = %d \n Base2 = %d \n Altezza = %d \n Area = %f ",b1, b2, h, area);
 
 	}else{
 		printf("errore")
