@@ -12,20 +12,18 @@
 #include <stdio.h>
 #include <math.h>
 
-#define pg 3.14
-
 void main(){
 
-    int a,b,c;
+    int a = 0;
+	int b = 0;
+	int c = 0;
     int x = 0;
+	
     float x1 = 0;
     float x2 = 0;
     float delta = 0;
     float eq = 0;
 
-    a = 0;
-    b = 0;
-    c = 0;
 
     puts("Inserisci il valore di a: ");
     scanf("%d", &a); 
@@ -50,8 +48,5 @@ void main(){
         x2 = (b*-1) - sqrt((b*b) - 4*(a*c)) / (2*a);
 
         printf("la soluzione x1 e' %f, mentre quella di x2 e' %f: ", x1, x2);
-    }
-
-    
+    }    
 }
-
