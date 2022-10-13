@@ -1,4 +1,4 @@
-# 1) Variabili #
+# 2a) Selezione Operatori Confronto #
 
 
 ## Compilazione file c
@@ -13,177 +13,173 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1 Scrivere un programma C che esegua le seguenti operazioni:
+> ## 1  Scrivere un programma che dato un numero intero in input, visualizza se il numero e' pari o dispari. 
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+void main(){
+
+    int n;
+
+    printf("Inserisci N: ");
+    scanf("%d", &n); 
+
+    if(n%2 == 0){
+        printf("Il numero inserito e' pari");
+
+    }else{
+        printf("Il numero inserito e' dispari");
+    }
+
+}
+```
+
+<hr/>
+
+> ## 2 Scrivere un programma che dati in input due valori visualizzi il maggiore. 
 > 
-> -   Definisca due variabili intere x e y.
-> -   Assegni alle variabili i valori 7 e 3.
-> -   Stampi a video i valori di x e y e il loro prodotto.
 
 ```c
 #include <stdio.h>
 
 void main(){
+
+    int n1 = 0;
+    int n2 = 0;
+
+    printf("Inserisci N1: ");
+    scanf("%d", &n1); 
+    printf("\nInserisci N2: ");
+    scanf("%d", &n2); 
+
+    if(n1 == n2){
+        printf("N1 e' uguale a N2");
+		
+    }else{
+        if(n1 > n2){
+            printf("N1 e' maggiore di N2");	
+        }else{
+            printf("N2 e' maggiore di N1");			
+        }
 	
+    }
+
+}
+```
+
+<hr/>
+
+> ## 3 Realizzare un programma che legga due numeri interi e controlli se il primo e' multiplo del secondo.
+> 
+
+```c
+#include <stdio.h>
+
+void main(){
+
+    int n1 = 0;
+	int n2 = 0;
+
+    printf("Inserisci n1: ");
+    scanf("%d", &n1); 
+    printf("\nInserisci n2: ");
+    scanf("%d", &n2); 
+
+    if(a%b == 0){
+        printf("b e' multiplo a a");
+		
+    }else{
+        printf("b non e' multiplo di a");
+		
+    }
+
+}
+```
+
+<hr/>
+
+> ## 4 Si realizzi un programma in linguaggio C che acquisisca da tastiera un numero e stampi il valore assoluto di tale numero.
+> -	Se il numero x inserito e' positivo o nullo, basta visualizzare x. 
+> - Se il numero inserito e' negativo, bisogna visualizzare -x.  
+> 
+
+```c
+#include <stdio.h>
+
+void main(){
+
     int x = 0;
-	int y = 0;
-	
-	x = 7;
-	y = 3;
 
-	printf("Prodotto: %d", x * y);
+    printf("Inserisci X: ");
+    scanf("%d", &x); 
+
+    if(x==0 || x>0){
+        printf("Il valore di x e' positivo %d", x);
+		
+    }else{
+        printf("Il valore di x e' negativo %d", x);
+		
+    }
+
 }
 ```
 
 <hr/>
 
-> ## 2 Scrivere un programma C che esegua le seguenti operazioni:
+> ## 5 Scrivere un programma che dato un numero intero in input, visualizza se il numero e' nullo, positivo o negativo. 
 > 
-> -   Inizializzi due variabili intere x e y;
-> -   Calcoli l'area del rettangolo di lati x e y;
-> -   Stampi a video le misure dei lati e l'area del rettangolo in modo che l'output abbia la forma seguente:
->	```
->   Lato1 = (valore di x)
-> 	Lato2 = (valore di y)
-> 	Area = (area calcolata)
->	```
-
 ```c
 #include <stdio.h>
 
 void main(){
 
     int x = 0;
-    int y = 0;
-    int area = 0;
 
-    x = 5;
-    y = 4;
+    printf("Inserisci N: ");
+    scanf("%d", &n); 
 
-    area = x * y;
+    if(n >- 1){
+        printf("Il valore di n e' positivo\n");
+		
+        if(n == 0){
+            printf("Il valore di n e' nullo\n");
+        }
+    }
+  
+    if(n < 0){
+        printf("Il valore di n e' negativo\n");
+		
+    }
 
-    printf("LatoX: %d \nLatoY: %d \nArea %d\n", x, y, area);
 }
 ```
 
 <hr/>
 
-> ## 3 Scrivere un programma C che esegua le seguenti operazioni:
-> 
-> -   Inizializzi due variabili intere x e y;
-> -   Calcoli l'area del trapezio di basi x e y e altezza h;
-> -   Stampi a video le misure delle basi e dell'altezza e l'area del trapezio in modo che abbia la forma seguente
-> 	```
->	Base1 = (valore di x)
->	Base2 = (valore di y)
-> 	Altezza = (valore di h)
->	Area = (area calcolata)
->	```
-
-
-```c
-#include <stdio.h>
-
-void main(){
-
-    int x = 0;
-    int y = 0;
-    int h = 0;
-    float area = 0;
-
-    x = 7;
-    y = 3;
-    h = 5;
-
-    area = ( (x+y) * h)  / 2;
-
-    printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
-}
-```
-
-<hr/>
-
-> ## 4 Risolvere l'esercizio precedente leggendo in input i valori dei lati (float) e dell'altezza (float) utilizzando il metodo scanf.
+> ## 6 Scrivere un programma che dati in input tre valori, visualizza il maggiore. 
 > 
 ```c
 #include <stdio.h>
 
 void main(){
-	
-    float x = 0;
-    float y = 0;
-    float h = 0;
-    float area = 0;
-    
-    printf("Inserisci lato 1:");
-    scanf("%f", &x);
-    printf("Inserisci lato 2:");
-    scanf("%f", &y);
-    printf("Inserisci H:");
-    scanf("%f", &h);
 
-    area = ( (x+y) * h)  / 2;
+    int n1, n2, n3;
 
-    printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
-}
-```
+    printf("Inserisci N1: ");
+    scanf("%d", &n1); 
+    printf("Inserisci N2: ");
+    scanf("%d", &n2); 
+    printf("Inserisci N3: ");
+    scanf("%d", &n3);
 
-<hr/>
-
-> ## 5 Scrivere un programma che prenda due numeri in input e li stampi nell'ordine inverso.
-> 
-```c
-#include <stdio.h>
-
-void main(){
-	
-    float num1 = 0;
-    float num2 = 0;
-
-    printf("Inserisci num1:");
-    scanf("%f", &num1);
-    printf("Inserisci num2:");
-    scanf("%f", &num2);
-
-    printf("Num2: %f \nNum1: %f", num2, num1);
-}
-```
-
-<hr/>
-
-> ## 6 Scrivere un programma che permetta di inserire 4 numeri float e ne stampi la somma,la media, il prodotto.
-> 
-```c
-#include <stdio.h>
-
-void main(){
-	
-    float num1 = 0;
-    float num2 = 0;
-    float num3 = 0;
-    float num4 = 0;
-
-    float somma = 0;
-    float media = 0;
-    float prodotto = 0;
-
-    printf("Inserisci num1:");
-    scanf("%f", &num1);
-    printf("Inserisci num2:");
-    scanf("%f", &num2);
-    printf("Inserisci num3:");
-    scanf("%f", &num3);
-    printf("Inserisci num4:");
-    scanf("%f", &num4);
-	
-//Metodo 1:
-    somma = num1+num2+num3+num4;
-    media = (somma / 4);
-    prodotto = num1 * num2 * num3 * num4;
- 
-    printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
-	
-//Metodo 2 (Senza creazione variabili dedicate):
-    printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
-
+    if(n1>n2 && n1 > n3){
+        printf("Il numero maggiore e' N1");
+    }else if(n2>n1 && n2>n3){
+        printf("Il numero maggiore e' N2");
+    }else{
+        printf("Il numero maggiore e' N3");
+    }
 }
 ```
