@@ -115,7 +115,7 @@ void main(){
 	scanf("%d",&h);
 	
 	if(l1 > 0 && l2 > 0 && h > 0){
-	  area = l1 * l2;
+	  area = ( (x+y) * h)  / 2;
 	  printf("Base1 = %d \n Base2 = %d \n Altezza = %d \n Area = %f ",b1, b2, h, area);
 
 	}else{
@@ -126,91 +126,58 @@ void main(){
 
 <hr/>
 
-> ## 4 Si realizzi un programma in linguaggio C che acquisisca da tastiera un numero e stampi il valore assoluto di tale numero.
-> -	Se il numero x inserito e' positivo o nullo, basta visualizzare x. 
-> - 	Se il numero inserito e' negativo, bisogna visualizzare -x.  
-> 
+> ## 4  L'utente inserisce un anno ed il calcolatore verifica se e' bisestile. Un anno e' bisestile se e' divisibile per 4 ma non per 100, oppure se e' divisibile per 400.
+>```
+>	Esempi esecuzione:
+>
+>	anno --> 1997
+>	L'anno 1997 non e' bisestile
+>
+>	anno --> 1996
+>	L'anno 1996 e' bisestile
+>
+>	anno --> 1900
+>	L'anno 1900  non e' bisestile
+>
+>	anno --> 2000
+>	L'anno 2000  e' bisestile
+>
+>	anno --> 2012
+>	L'anno 2012 e' bisestile
+>``` 
 
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
-    int x = 0;
-
-    printf("Inserisci X: ");
-    scanf("%d", &x); 
-
-    if(x == 0 || x > 0){
-        printf("Il valore di x e' positivo %d", x);
+    int anno = 0;
+	
+    puts("Inserisci l'anno");
+    scanf("%d", &anno);
+    
+	printf("anno --> %d \n", anno);
+	
+    if((anno%4 == 0 && anno%100 != 0) || anno%400 == 0){
+        printf("L'anno %d e' bisestile", anno);
 		
     }else{
-        printf("Il valore di x e' negativo %d", x);
-		
-    }
-
+         printf("L'anno %d non e' bisestile", anno);
+		 
+	}
 }
 ```
 
 <hr/>
 
-> ## 5 Scrivere un programma che dato un numero intero in input, visualizza se il numero e' nullo, positivo o negativo. 
+> ## 5 
 > 
 ```c
-#include <stdio.h>
-
-void main(){
-
-    int x = 0;
-
-    printf("Inserisci N: ");
-    scanf("%d", &n); 
-
-    if(n >- 1){ //Per noi 0 é un valore positivo
-        printf("Il valore di n e' positivo\n");
-		
-        if(n == 0){
-            printf("Il valore di n e' nullo\n");
-        }
-    }
-  
-    if(n < 0){
-        printf("Il valore di n e' negativo\n");
-		
-    }
-
-}
 ```
 
 <hr/>
 
-> ## 6 Scrivere un programma che dati in input tre valori, visualizza il maggiore. 
+> ## 6 
 > 
 ```c
-#include <stdio.h>
-
-void main(){
-
-    int n1 = 0;
-	int n2 = 0;
-	int n3 = 0;
-
-    printf("Inserisci N1: ");
-    scanf("%d", &n1); 
-    printf("Inserisci N2: ");
-    scanf("%d", &n2); 
-    printf("Inserisci N3: ");
-    scanf("%d", &n3);
-
-    if(n1 > n2 && n1 > n3){
-        printf("Il numero maggiore e' N1");
-		
-    }else if(n2 > n1 && n2 > n3){
-        printf("Il numero maggiore e' N2");
-		
-    }else{
-        printf("Il numero maggiore e' N3");
-		
-    }
-}
 ```
