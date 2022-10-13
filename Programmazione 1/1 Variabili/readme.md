@@ -22,8 +22,8 @@ because they require Google Drive authorization.
 | `npm run push:static` | just HTML & CSS |
 | `npm run push` | everything |
 
-
-
+<br/>
+<hr/>
 
 > ## 1 Scrivere un programma C che esegua le seguenti operazioni:
 > 
@@ -31,7 +31,6 @@ because they require Google Drive authorization.
 > -   Assegni alle variabili i valori 7 e 3.
 > -   Stampi a video i valori di x e y e il loro prodotto.
 
-<hr/>
 
 ```c
 #include <stdio.h>
