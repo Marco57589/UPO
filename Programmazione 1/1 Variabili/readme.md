@@ -1,15 +1,11 @@
-<h1> 1) Variabili
+#### 1) Variabili
 
 
-
-## Building
-
+## Compilazione
 ```
 $ gcc file_name.c
 ```
-
-## Run
-
+## Esecuzione
 ```
 $ ./file_name
 ```
