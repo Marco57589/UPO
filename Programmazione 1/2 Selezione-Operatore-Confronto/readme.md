@@ -142,7 +142,7 @@ void main(){
     printf("Inserisci N: ");
     scanf("%d", &n); 
 
-    if(n >- 1){
+    if(n >- 1){ //Per noi 0 é un valore positivo
         printf("Il valore di n e' positivo\n");
 		
         if(n == 0){
