@@ -29,9 +29,19 @@ because they require Google Drive authorization.
 # Google Apps Script Resources
 
 
+# 1
 
 ```c
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+#include <stdio.h>
+
+void main(){
+    int x = 0;
+	int y = 0;
+
+    x = 7;
+    y = 3;
+
+    printf("Prodotto: %d", x * y);
+
+}
 ```
