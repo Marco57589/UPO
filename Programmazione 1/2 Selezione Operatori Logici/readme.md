@@ -1,4 +1,4 @@
-# 2a) Selezione Operatori Logici #
+# 2b) Selezione Operatori Logici #
 
 
 ## Compilazione file c
