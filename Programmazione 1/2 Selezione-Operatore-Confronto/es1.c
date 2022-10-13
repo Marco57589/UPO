@@ -9,7 +9,7 @@
 
 void main(){
 
-    int n;
+    int n = 0;
 
     printf("Inserisci N: ");
     scanf("%d", &n); 
