@@ -6,25 +6,18 @@
 */
 
 #include <stdio.h>
-#include <stdbool.h>
 
 void main(){
 
     int n = -1;
-    bool end = false;
     int risultato = 0;
 
-    while(!end){
+    while(n != 0){
         puts("Inserisci n:");
         scanf("%d", &n);
         risultato += n;
-        if(n == 0){
-            end = true;
-        }
     }
 
     printf("il risultato e': %d", risultato);
     puts("\n");
-
-
 }
