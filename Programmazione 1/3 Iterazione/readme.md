@@ -269,9 +269,21 @@ void main(){
 
 <hr/>
 
-> ## 12 
+> ## 12 Stampare una serie di 200 simboli "+" e "-" alternati
 
 ```c
+#include <stdio.h>
+
+void main(){
+
+    for(int i = 0; i < 200; i++){
+        if(i%2 == 0){
+            puts("+");
+        }else{
+            puts("-");
+        }
+    }
+}
 ```
 
 <hr/>
@@ -279,9 +291,42 @@ void main(){
 
 <hr/>
 
-> ## 13
-
+> ## 13 Scrivere un programma che legge da tastiera un intero n maggiore di 0 e stampare i numeri interi da 0 a n, quattro per riga.
+>
+>
+>```
+>Esempio di esecuzione
+>--------------------
+>
+>Se n e' uguale a 14 deve essere stampato
+>
+>     0     1     2     3
+>     4     5     6     7
+>     8     9    10    11
+>    12    13    14  
+>```
 ```c
+#include <stdio.h>
+
+void main(){
+
+    int n = 0;
+    int k = 0;
+
+    while(n<1){ //controllo input > 0
+        puts("Inserisci n: ");
+        scanf("%d", &n);
+    }
+
+    for(int i = 0; i<=n; i++){
+        printf(" %d \t", i);
+        k++;
+        if(k==4){
+            puts("\n");
+            k=0;
+        }
+    }
+}
 ```
 
 <hr/>
