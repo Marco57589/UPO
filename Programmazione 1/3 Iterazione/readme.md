@@ -331,9 +331,6 @@ void main(){
 
 <hr/>
 
-
-<hr/>
-
 > ## 14 Scrivere un programma che legge da tastiera due interi righe e colonne e stampa due tabelle delle dimensioni specificate e contenenti i numeri da 0 in avanti, fino al riempimento della tabella.
 >
 >Esempio di esecuzione
@@ -397,9 +394,6 @@ void main(){
 
 <hr/>
 
-
-<hr/>
-
 > ## 15 Chiesti in input i valori di r e di c, stampare a video un rettangolo (o quadrato se r=c) di r righe e c colonne di caratteri X
 >
 >Esempio di esecuzione
@@ -436,9 +430,6 @@ void main(){
 
 <hr/>
 
-
-<hr/>
-
 > ## 16 Scrivere un programma che stampi la tavola pitagorica per valori da 1 a 10
 
 
@@ -461,16 +452,10 @@ void main(){
 
 <hr/>
 
-
-<hr/>
-
 > ## 17
 
 ```c
 ```
-
-<hr/>
-
 
 <hr/>
 
