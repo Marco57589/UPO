@@ -269,13 +269,13 @@ void main(){
 void main(){
 
     int n = 0;
+    int i = 0;
+    int c = 0;
 
-     while(n<1){
+    while(n<1){
         puts("Inserisci n: ");
         scanf("%d", &n);
     }
-    int i = 0;
-    int c = 0;
 
     for(i=1; i<=n; i++){
         if(n%i == 0){
