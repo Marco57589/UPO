@@ -334,9 +334,65 @@ void main(){
 
 <hr/>
 
-> ## 14
+> ## 14 Scrivere un programma che legge da tastiera due interi righe e colonne e stampa due tabelle delle dimensioni specificate e contenenti i numeri da 0 in avanti, fino al riempimento della tabella.
+>
+>Esempio di esecuzione
+>
+>```
+> Se righe = 4 e colonne = 8 deve essere stampato
+>
+>Se n e' uguale a 14 deve essere stampato
+>
+>     0     1     2     3     4     5     6     7
+>     8     9    10    11    12    13    14    15
+>    16    17    18    19    20    21    22    23
+>    24    25    26    27    28    29    30    31
+>
+>
+>     0     4     8    12    16    20    24    28
+>     1     5     9    13    17    21    25    29
+>     2     6    10    14    18    22    26    30
+>     3     7    11    15    19    23    27    31
+>```
 
 ```c
+#include <stdio.h>
+
+void main(){
+
+    int riga = 0;
+    int colonna = 0;
+    int n = 0;
+    int valore = 0;
+
+    puts("Inserisci riga");
+    scanf("%d", &riga);
+
+    puts("Inserisci colonna");
+    scanf("%d", &colonna);
+
+
+    for(int i = 0; i<riga; i++){
+        for(int j = 0; j<colonna; j++){
+            printf(" %d \t", n);
+            n++;
+        }
+        puts("\n"); 
+    }
+
+    puts("\n Tabella 2");
+
+    for(int i = 0; i<riga; i++){
+        puts("\n");
+        valore = i;
+
+        for(int j = 0; j<colonna; j++){
+            printf(" %d \t", valore);
+            valore += riga;
+        }
+    }
+
+}
 ```
 
 <hr/>
@@ -344,9 +400,38 @@ void main(){
 
 <hr/>
 
-> ## 15
-
+> ## 15 Chiesti in input i valori di r e di c, stampare a video un rettangolo (o quadrato se r=c) di r righe e c colonne di caratteri X
+>
+>Esempio di esecuzione
+>
+>```
+>  XXXXX
+>  XXXXX
+>  XXXXX
+>```
+>
 ```c
+#include <stdio.h>
+
+void main(){
+
+    int riga = 0;
+    int colonna = 0;
+
+    puts("Inserisci riga");
+    scanf("%d", &riga);
+
+    puts("Inserisci colonna");
+    scanf("%d", &colonna);
+
+
+    for(int i = 0; i<riga; i++){
+        for(int j = 0; j<colonna; j++){
+            printf("X");
+        }
+        puts("\n"); 
+    }
+}
 ```
 
 <hr/>
