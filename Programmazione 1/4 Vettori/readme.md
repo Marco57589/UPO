@@ -109,7 +109,7 @@ $ ./file_name
 <hr/>
 
 > ## 12. Scrivere un programma che legga una frase introdotta da tastiera. La frase é terminata dall’introduzione del carattere di invio. La frase contiene solo
-caratteri minuscoli e complessivamente al pi`u 100 caratteri. Il programma dovrà stampare su schermo le seguenti informazioni:
+caratteri minuscoli e complessivamente al più 100 caratteri. Il programma dovrà stampare su schermo le seguenti informazioni:
 > - Per ognuna delle lettere dell’alfabeto, il numero di volte che la lettera compare nella stringa.
 > - Il numero di consonanti presenti nella stringa.
 > - Il numero di vocali presenti nella stringa.
