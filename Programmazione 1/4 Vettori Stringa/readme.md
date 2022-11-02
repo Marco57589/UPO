@@ -130,8 +130,8 @@ void main(){
 > ## 3. Scrivere un programma che data una stringa (s1) in input genera due stringhe (s2, s3) in questo modo:
 > - s2 contiente la prima meta' dei caratteri di s1;
 > - s3 contiente la seconda meta' dei caratteri di s1.
->```
 > Esempio:
+>```
 > s1: buongiorno	--->	s2: buong	s3: iorno	
 >```
 ```c
@@ -167,8 +167,8 @@ void main(){
 > ## 4. Scrivere un programma che data una stringa (s1) in input genera due stringhe (s2, s3) in questo modo:
 > s2 contiene le vocali presenti in s1, evitando le ripetizioni; 
 > s3 contiene le consonanti presenti in s1, evitando le ripetizioni.
-> ```
 > Esempio:
+> ```
 > s1: buongiorno	---> s1: uoi	s2: bngr
 > ```
 
@@ -204,8 +204,8 @@ void main(){
 
 > ## 5. Scrivere un programma che chiede all'utente di inserire un carattere e una lunghezza. 
 > Poi crea una stringa di tale lunghezza composta dal carattere inserito e dai caratteri successivi nell'alfabeto, fino a completare la stringa. 
->```
 > Esempio:
+>```
 > carattere: 'd'	lunghezza: 6	--->	defghi
 > ```
 
