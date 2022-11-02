@@ -16,7 +16,7 @@ $ ./file_name
 > ## 1.  Scrivere un programma che memorizzi in un array e stampi una sequenza di numeri inseriti dall’utente 
 
 ```c
-include <stdio.h>
+#include <stdio.h>
 
 void main(){
 
@@ -111,7 +111,6 @@ void main(){
 }
 ```
 
-<hr/>
 <hr/>
 
 > ## 4. Scrivere un programma che memorizzi in un array una sequenza di numeri inserita dall’utente e stampi come output gli elementi pari.
