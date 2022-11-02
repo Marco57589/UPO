@@ -13,65 +13,114 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1.  Scrivere un programma che memorizzi in un array e stampi una sequenza di numeri inseriti dall’utente 
+> ## 1. Scrivere un programma che chiede all'utente di inserire una password.
+> La password deve contenere:
+> - almeno 8 caratteri
+> - almeno una lettera maiuscola
+> - almeno una lettera minuscola
+> - almeno una cifra
+> - almeno un simbolo di punteggiatura (. , ; : ? !)
+> - almeno un carattere speciale (@ # * $ %)
+Se la password non rispetta tutti i requisiti si visualizza un messaggio di errore e si ripete la richiesa fino a quando la password non e' adeguata. 
+Se la password e' corretta si visualizza un messaggio di accettazione.
 
 ```c
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
+#include <ctype.h>
 
 void main(){
+    
+    char password[100];
+    char errori[] = {'#', ';', '1', 'A', 'a', 'L'}; //carattere speciale, punteggiatura, cifra, maiuscola, minuscola, lunghezza
+    int controlli[] = {0,0,0,0,0,0};
+    int corretto = 0;
+    int i,j = 0;
 
-    int n = 0;
-    int valore = 0;
-    int i = 0;
+    while(corretto != 6){
+    
 
-    puts("Quanti valori vuoi inserire?");
-    scanf("%d", &n);
+        for(j = 0; j < 6; j++){ //reset conrolli
+            controlli[j] = 0;
+        }
+        corretto = 0;
 
-    int array[n];
+        puts("\nInserisci la password");
+        scanf("%s", password);
 
-    for(i = 0; i < n; i++){
-        printf("Inserisci il valore %d :", i);
-        scanf("%d", &valore);
-        array[i] = valore;
+
+        for(i = 0; i < strlen(password); i++){
+            if(password[i] == '@' || password[i] == '#' || password[i] ==  '*' || password[i] == '$' || password[i] == '%'){
+                controlli[0] = 1;
+            }
+            if(password[i] == '.' || password[i] == ',' || password[i] ==  ';' || password[i] == ':' || password[i] == '?' || password[i] == '!'){
+                controlli[1] = 1;
+            }
+            if(isdigit(password[i])){
+                controlli[2] = 1;
+            }
+            if(password[i] >= 'A' && password[i] <= 'Z'){
+                controlli[3] = 1;
+            }
+            if(password[i] >= 'a' && password[i] <= 'z'){
+                controlli[4] = 1;
+            }
+        }
+        if(strlen(password) >= 8){
+            controlli[5] = 1;
+        }
+
+        puts("\nControllo password");
+
+        for(j = 0; j < 6; j++){
+            if(controlli[j] == 1){
+                printf("\nCarattere - %c V", errori[j]);
+                corretto++;
+            }else{
+                printf("\nCarattere - %c X", errori[j]);
+            }
+        }
     }
-
-    //Stampa
-    for(i = 0; i < n; i++){
-        printf("%d ", array[i]);
-    }
-
+    puts("Password accettata");
 }
 ```
 
 <hr/>
 
-> ## 2. Scrivere un programma che stampi in ordine inverso una sequenza di numeri inseriti dall’utente memorizzandola in un array.
-> 
-
+> ## 2. Scrivere un programma che date due stringhe (s1, s2) in input genera la stringa s3 composta da s1 e s2 concatenate. 
+> Esempio:
+>```
+> s1: buon	s2: giorno	--->	s3: buongiorno
+>```
 ```c
 #include <stdio.h>
+#include <string.h>
 
 void main(){
-
-    int n = 0;
-    int valore = 0;
+    
+    char s1[50];
+    char s2[50];
+    char s3[100];
     int i = 0;
+   
+    puts("\nInserisci s1");
+    scanf(" %[^\n]", s1);
 
-    puts("Quanti valori vuoi inserire?");
-    scanf("%d", &n);
+    puts("\nInserisci s2");
+    scanf(" %[^\n]", s2);
 
-    int array[n];
 
-    for(i = 0; i < n; i++){
-        printf("Inserisci il valore %d :", i);
-        scanf("%d", &valore);
-        array[i] = valore;
+    for(i = 0; i < strlen(s1); i++){
+        s3[i] = s1[i];
     }
 
-    //Stampa
-    for(i = (n-1); i >= 0; i--){
-        printf("%d ", array[i]);
+    for(i = 0; i < strlen(s2); i++){
+        s3[strlen(s1)+i] = s2[i];
     }
+
+    printf("La stringa risultate e': %s", s3);
 
 }
 ```
