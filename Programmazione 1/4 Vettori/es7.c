@@ -10,6 +10,7 @@ void main(){
 
     int i = 0;
     int k = 0;
+    int not_equal = 0;
     char aus[20];
 
     puts("inserisci la stringa da controllare");
@@ -21,8 +22,14 @@ void main(){
     for (i = 0; i < strlen(aus)/2; i++) {
         if(aus[i] != aus[k]){
             puts("La frase non é un palindromo");
+        }else{
+            not_equal++;
         }
         k--;
+    }
+
+    if(not_equal > 0){
+        puts("La frase é un palindromo");
     }
     
 }
