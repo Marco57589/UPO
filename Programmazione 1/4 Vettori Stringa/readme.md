@@ -1,4 +1,4 @@
-# 4b) Vettori Stringa#
+# 4b) Vettori Stringa
 
 
 ## Compilazione file c
