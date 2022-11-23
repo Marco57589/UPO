@@ -51,7 +51,7 @@ void main(){
     }
 
     if(r > riga){
-        puts("JavaIO.IndexOutOfBound");
+        puts("JavaIO.IndexOutOfBound"); //per il meme
     }else{
         for(j = 0; j < colonna; j++){
             somma += mat[r][j];
