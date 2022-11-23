@@ -14,11 +14,11 @@ $ ./file_name
 <hr/>
 
 > ## 1. Scrivere un programma che 
-> - genera una matrice di numeri pseudo-casuali composti da una o due cifre;
-> - visualizza la matrice;
-> - chiede all'utente di inserire l'indice di una riga;
-> - se l'indice non e' compatibile con le dimensioni della matrice, visualizza un messaggio di errore;
-> - altrimenti calcola la somma dei valori su quella riga. 
+> - Genera una matrice di numeri pseudo-casuali composti da una o due cifre;
+> - Visualizza la matrice;
+> - Chiede all'utente di inserire l'indice di una riga;
+> - Se l'indice non e' compatibile con le dimensioni della matrice, visualizza un messaggio di errore;
+> - Altrimenti calcola la somma dei valori su quella riga. 
 
 ```c
 #include <stdio.h>
@@ -64,11 +64,11 @@ void main(){
 <hr/>
 
 > ## 2. Scrivere un programma che 
-> - genera una matrice di numeri pseudo-casuali composti da esattamente due cifre;
-> - visualizza la matrice;
-> - chiede all'utente di inserire l'indice di una colonna;
-> - se l'indice non e' compatibile con le dimensioni della matrice, visualizza un messaggio di errore;
-> - altrimenti calcola il massimo dei valori su quella colonna.
+> - Genera una matrice di numeri pseudo-casuali composti da esattamente due cifre;
+> - Visualizza la matrice;
+> - Chiede all'utente di inserire l'indice di una colonna;
+> - Se l'indice non e' compatibile con le dimensioni della matrice, visualizza un messaggio di errore;
+> - Altrimenti calcola il massimo dei valori su quella colonna.
 ```c
 #include <stdio.h>
 #include <stdlib.h>  
@@ -112,9 +112,9 @@ void main(){
 <hr/>
 
 > ## 3. Scrivere un programma che
-> - chiede all'utente di inserire i valori della prima riga di una matrice;
-> - carica automaticamente le altre righe in modo che i valori su una riga siano i successivi dei valori sulla riga precedente;
-> - visualizza la matrice.
+> - Chiede all'utente di inserire i valori della prima riga di una matrice;
+> - Carica automaticamente le altre righe in modo che i valori su una riga siano i successivi dei valori sulla riga precedente;
+> - Visualizza la matrice.
 > Esempio:
 >```
 > 3	2	5
@@ -157,82 +157,163 @@ void main(){
 
 <hr/>
 
-> ## 4. Scrivere un programma che data una stringa (s1) in input genera due stringhe (s2, s3) in questo modo:
-> s2 contiene le vocali presenti in s1, evitando le ripetizioni; 
-> s3 contiene le consonanti presenti in s1, evitando le ripetizioni.
+> ## 4. Scrivere un programma che
+- Chiede all'utente di inserire i valori della prima colonna di una matrice;
+- Carica automaticamente le altre colonne in modo che i valori su una colonna siano il doppio dei valori sulla colonna precedente;
+- Visualizza la matrice.
 > Esempio:
 > ```
-> s1: buongiorno	---> s1: uoi	s2: bngr
+> 3  6	12
+> 2	 4	8
+> 5	10	20
 > ```
 
 ```c
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>  
 
 void main(){
+    int riga = 5;
+    int colonna = 5;
+    int mat[riga][colonna];
+    int i,j = 0;
+    int value = 0;
     
-    char s1[100];
-    char s2[50];
-    char s3[50];
-    int i = 0;
-    int k = 0;
-    int j = 0;
-   
-    puts("\nInserisci s1");
-    scanf(" %[^\n]", s1);
+    for(i = 0; i < riga; i++){
+        printf("Inserisci il valore nella riga %d colonna 0\n", i);
+        scanf("%d", &mat[0][j]);
+    }
 
-    for(i = 0; i < strlen(s1); i++){
-        if(s1[i] == 'a' || s1[i] == 'e' || s1[i] == 'i' || s1[i] == 'o' || s1[i] == 'u'){
-            s2[k] = s1[i];
-            k++;
-        }else{
-            s3[j] = s1[i];
-            j++;     
+
+    puts("");
+    for(i = 0; i < riga; i++){
+        for(j = 1; j < colonna; j++){
+            mat[i][j] = mat[i][j-1]*2;
         }
     }
-    printf("La stringa iniziale e': %s\ns2: %s \ns3: %s", s1, s2, s3);
+
+    for(i = 0; i < riga; i++){
+        for(j = 0; j < colonna; j++){
+            printf("%d \t", mat[i][j]);
+        }
+        puts("");
+    }
+
 }
 ```
 <hr/>
 
-> ## 5. Scrivere un programma che chiede all'utente di inserire un carattere e una lunghezza. 
-> Poi crea una stringa di tale lunghezza composta dal carattere inserito e dai caratteri successivi nell'alfabeto, fino a completare la stringa. 
-> Esempio:
->```
-> carattere: 'd'	lunghezza: 6	--->	defghi
-> ```
+> ## 5. Scrivere un programma che
+> - Genera una matrice di numeri pseudo-casuali composti da una cifra;
+> - Visualizza la matrice;
+> - Chiede all'utente di inserire un valore x da cercare;
+> - Cerca x visitando la matrice riga per riga;
+> - Se presente, visualizza gli indici della riga e della colonna della prima occorrenza di x;
+> - Altrimenti visualizza "assente".
 
 ```c
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>  
 
 void main(){
-    
-    char c;
-    int lunghezza = 0;
-    int i = 0;
-    int carattere = 0;
-   
-    puts("\nInserisci un carattere");
-    scanf("%c", &c);
-    
-    carattere = c;
+    int riga = 3;
+    int colonna = 3;
+    int mat[riga][colonna];
+    int i,j = 0;
+    int find = 0;
+    int somma = 0;
 
-    puts("\nInserisci una lunghezza");
-    scanf("%d", &lunghezza);
-
-    char s3[lunghezza];
-
-    for(i = 0; i < lunghezza; i++){
-        s3[i] = carattere;
-        if(carattere == 122){
-            carattere = 97;
-        }else{
-            carattere++;
+    for(i = 0; i < riga; i++){
+        for(j = 0; j < colonna; j++){
+            mat[i][j] = rand()%10;
         }
     }
 
-    printf("\nCarattere: %c di lunghezza: %d --> %s", c, lunghezza, s3);
+    for(i = 0; i < riga; i++){
+        for(j = 0; j < colonna; j++){
+            printf("%d \t", mat[i][j]);
+        }
+        puts("");
+    }
+
+    puts("Inserisci il valore da cercare");
+    scanf("%d", &find);
+
+    int p = 0;
+    int a = 0;
+
+    for(i = 0; i < riga; i++){
+        for(j = 0; j < colonna; j++){
+            if(mat[i][j] == find && p==0){
+                p++;
+                printf("Trovato in posizione %d %d\n", i, j);
+            }else{
+                a++;
+            }
+        }
+    }
+    
+    if(a != 0 && p==0){
+        a++;
+        puts("Non trovato");
+    }
+
+}
+```
+<hr/>
+
+> ## 6. Scrivere un programma che
+> - Genera una matrice di numeri pseudo-casuali composti da una cifra;
+> - Visualizza la matrice;
+> - Chiede all'utente di inserire un valore x da cercare;
+> - Cerca x visitando la matrice colonna per colonna;
+> - Se presente, visualizza gli indici della riga e della colonna dell'ultima occorrenza di x;
+> - Altrimenti visualizza "assente". 
+
+```c
+#include <stdio.h>
+#include <stdlib.h>  
+
+void main(){
+    int riga = 3;
+    int colonna = 3;
+    int mat[riga][colonna];
+    int i,j = 0;
+    int find = 0;
+    int somma = 0;
+
+    for(i = 0; i < riga; i++){
+        for(j = 0; j < colonna; j++){
+            mat[i][j] = rand()%10;
+        }
+    }
+
+    for(i = 0; i < riga; i++){
+        for(j = 0; j < colonna; j++){
+            printf("%d \t", mat[i][j]);
+        }
+        puts("");
+    }
+
+    puts("Inserisci il valore da cercare");
+    scanf("%d", &find);
+
+    int a = 0;
+
+    for(j = colonna; j > 0; j--){   //parto dal fondo, la prima dal fondo é l'ultima dall'inizio.
+        for(i = riga; i > 0; i--){
+            if(mat[i][j] == find){
+                printf("Trovato in posizione %d %d", i, j);
+                break;
+            }else{
+                a++;
+            }
+        }
+    }
+    
+    if(a == riga*colonna){
+        puts("Non trovato");
+    }
 
 }
 ```
