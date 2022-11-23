@@ -173,7 +173,7 @@ void main(){
 > ```
 
 ```c
-##include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 void main(){
