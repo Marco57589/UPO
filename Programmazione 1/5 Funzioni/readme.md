@@ -1,9 +1,9 @@
-# 4) Vettori #
+# 5) Funzioni #
 
 
 ## Compilazione file c
 ```
-$ gcc file_name.c -lm
+$ gcc -Wall file_name.c -lm 
 ```
 ## Esecuzione
 ```
@@ -13,136 +13,271 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1.  Scrivere un programma che memorizzi in un array e stampi una sequenza di numeri inseriti dall’utente 
-
+> ## 1. Scrivere un programma che, sfruttando le funzioni, permetta di calcolare l’area di un cerchio o di un quadrato. 
+> L’utente inserisce un numero, dichiarando se si tratta del raggio di un cerchio o del lato di un quadrato.
+> Se l’utente inserisce un numero negativo viene visualizzato un errore, altrimenti il sistema calcola l’area in modo appropriato.
 ```c
 #include <stdio.h>
 
-void main(){
+#define p 3.14
 
-    int n = 0;
-    int valore = 0;
-    int i = 0;
+int area(char tipo_area, int n){
+    int area = 0;
 
-    puts("Quanti valori vuoi inserire?");
-    scanf("%d", &n);
-
-    int array[n];
-
-    for(i = 0; i < n; i++){
-        printf("Inserisci il valore %d :", i);
-        scanf("%d", &valore);
-        array[i] = valore;
+    switch (tipo_area){
+        case 'q':
+            area = n*n;
+            break;
+        case 'c':
+            area = (n*n) * p;
+            break;
+        default:
+            break;
     }
 
-    //Stampa
-    for(i = 0; i < n; i++){
-        printf("%d ", array[i]);
-    }
+    return area;
+}
 
+int main(){
+
+    int n = -1;
+    int aus = -1;
+    char tipo; // c = cerchio, q = quadrato
+    
+    while(n < 0){
+        puts("Inserisci un numero");
+        scanf("%d", &n);
+
+        if(n < 0){
+            puts("Il numero inserito deve essere maggiore di 0!");
+        }
+    }   
+
+    puts("Questo numero e' l'area del cerchio o del quadrato? inserisci 'c' per cerchio e 'q' per quadrato");
+
+    while(aus < 0){
+
+        puts("Inserisci il tipo di area");
+        scanf(" %c", &tipo);
+
+        if(tipo == 'c' || tipo == 'q'){
+            break;
+        }else{
+            puts("Valore non valido!");
+        }
+    }   
+
+    aus = area(tipo = tipo, n = n);
+
+    puts("Inserisci il tipo di area");
+    printf("L'area calcolata e': %d ", aus);
+    
+    return 0;
 }
 ```
 
 <hr/>
 
-> ## 2. Scrivere un programma che stampi in ordine inverso una sequenza di numeri inseriti dall’utente memorizzandola in un array.
-> 
+> ## 2. Scrivere un programma che permetta di inserire due vettori lunghi N e
+> stampi un terzo vettore i cui elementi sono la somma degli elementi dei
+> due vettori in input. Il programma utilizza 3 funzioni:
+> • Inserisci elementi nel vettore
+> • Calcola somma
+> • Stampa vettore
 
 ```c
 #include <stdio.h>
 
-void main(){
+int crea_vettore(int vettore[], int lunghezza){
+    int i=0;
 
-    int n = 0;
-    int valore = 0;
-    int i = 0;
+    for(i=0; i < lunghezza; i++){
+        printf("Inserisci il [%d] valore: ", i);
+        scanf("%d", &vettore[i]);
+    } 
+    puts("Vettore creato!");
+    return vettore;
+}
 
-    puts("Quanti valori vuoi inserire?");
-    scanf("%d", &n);
-
-    int array[n];
-
-    for(i = 0; i < n; i++){
-        printf("Inserisci il valore %d :", i);
-        scanf("%d", &valore);
-        array[i] = valore;
+void stampa_vettore(int vettore[], int n){
+    for(int i = 0; i < n; i++){
+        printf("%d \t", vettore[i]);
     }
+}
 
-    //Stampa
-    for(i = (n-1); i >= 0; i--){
-        printf("%d ", array[i]);
+int somma_vettori(int vettore1[], int  vettore2[], int somma[], int n){
+    for(int i = 0; i < n; i++){
+        somma[i] = vettore1[i] + vettore2[i];
     }
+    return somma;
+}
 
+
+int main(){
+
+    int lunghezza = -1;
+
+    while(lunghezza < 0){
+        puts("Inserisci N (MAGGIORE DI 0)");
+        scanf("%d", &lunghezza);
+        if(lunghezza < 0){
+            puts("Il numero inserito deve essere maggiore di 0!");
+        }
+    }  
+    
+    int vettore1[lunghezza];
+    int vettore2[lunghezza];
+    int somma[lunghezza];
+
+    crea_vettore(vettore1, lunghezza);
+    crea_vettore(vettore2, lunghezza);
+
+    somma_vettori(vettore1, vettore2, somma, lunghezza);
+
+    puts("");
+    puts("Vettore1:");
+    stampa_vettore(vettore1, lunghezza);
+    puts("\nVettore2:");
+    stampa_vettore(vettore2, lunghezza);
+    puts("\nSomma:");
+    stampa_vettore(somma, lunghezza);
+    
+    return 0;
 }
 ```
 
 <hr/>
 
-> ## 3. Scrivere un programma che memorizzi in un array una sequenza di numeri inserita dall’utente e stampi come output gli elementi di posizione pari.
-> 
-
+> ## 3. Scrivere un programma che calcola il fattoriale di un numero. Il programma conterra una funzione denominata fatt, che calcola il fattoriale
+> di un numero intero passato come parametro e che restituisce il risultato.
+> Si consiglia di utilizzare il tipo double per il valore di ritorno in quanto la funzione fattoriale cresce molto velocemente.
+> Il calcolo del fattoriale deve essere ottenuto in maniera iterativa (ciclo for o ciclo while).
+> f att(N ) = 1 ∗ 2 ∗ 3 ∗ . . . ∗ (N )
+> f att(0) = 1
 ```c
 #include <stdio.h>
 
-void main(){
-
-    int n = 0;
-    int valore = 0;
-    int i = 0;
-
-    puts("Quanti valori vuoi inserire?");
-    scanf("%d", &n);
-
-    int array[n];
-
-    for(i = 0; i < n; i++){
-        printf("Inserisci il valore %d :", i);
-        scanf("%d", &valore);
-        array[i] = valore;
+double calcola_fattoriale(int n){
+    int i = 0 ;
+    for(i = (n-1); i>1; i--){
+        n *= i;
     }
+    return n;
+}
 
-    // Stampa
-    for(i = 0; i < n; i++){ //    for (i = 0; i < n; i=i+2) {
-        if(i%2 == 0){
-            printf("%d ", array[i]);
-       }
-    }
+int main(){
+    int n = -1;
+    double fattoriale = 0;
 
+     while(n < 0){
+        puts("Inserisci N (MAGGIORE DI 0)");
+        scanf("%d", &n);
+        if(n < 0){
+            puts("Il numero inserito deve essere maggiore di 0!");
+        }
+    }  
+    
+    fattoriale  = calcola_fattoriale(n);
+
+    printf("Il fattoriale di %d é: %f", n, fattoriale);
+    
+    return 0;
 }
 ```
 
 <hr/>
 
-> ## 4. Scrivere un programma che memorizzi in un array una sequenza di numeri inserita dall’utente e stampi come output gli elementi pari.
-> 
-
+> ## 4. Scrivere un programma che, utilizzando le funzioni, calcoli la media, il massimo e il minimo di un array di numeri reali Utilizzare le funzioni:
+> leggi(): permette di inserire il vettore di numeri 
+> media(): calcola e ritorna la media
+> max(): calcola e ritorna il valore massimo
+> min(): calcola e ritorna il valore minimo
+> stampa(): visualizza il vettore, la media e il massimo e il minimo
 ```c
 #include <stdio.h>
 
-void main(){
+int media_array(int vettore[], int lunghezza){
+    int media = 0;
 
-    int n = 0;
-    int valore = 0;
-    int i = 0;
-
-    puts("Quanti valori vuoi inserire?");
-    scanf("%d", &n);
-
-    int array[n];
-
-    for(i = 0; i < n; i++){
-        printf("Inserisci il valore %d :", i);
-        scanf("%d", &valore);
-        array[i] = valore;
+    for(int i = 0; i < lunghezza; i++){
+        media += vettore[i];
     }
 
-    // Stampa
-    for(i = 0; i < n; i++){
-        if(array[i]%2 == 0){
-            printf("%d ", array[i]);
-       }
+    media = media / lunghezza;
+
+    return media;
+}
+
+int massimo_array(int vettore[], int lunghezza){
+    int massimo = 0;
+
+    for(int i = 0; i < lunghezza; i++){
+        if(vettore[i] > massimo){
+            massimo = vettore[i];
+        }
     }
 
+    return massimo;
+}
+
+int minimo_array(int vettore[], int lunghezza){
+    int min = 0;
+
+    min = vettore[0]; //altrimenti, visto che é inizializzato a 0 questo rimarrà sempre 0
+
+    for(int i = 0; i < lunghezza; i++){
+        if(vettore[i] < min){
+            min = vettore[i];
+        }
+    }
+
+    return min;
+}
+
+int inserimento(){
+    int aus;
+    puts("\n--------------------");
+    puts("Inserisci N: ");
+    scanf("%d", &aus);
+    puts("--------------------");
+
+    return aus;
+}
+
+int crea_vettore(int vettore[], int lunghezza){
+    int i=0;
+
+    for(i=0; i < lunghezza; i++){
+        printf("Inserisci il [%d] valore: ", i);
+        scanf("%d", &vettore[i]);
+    } 
+    puts("Vettore creato!");
+    return vettore;
+}
+
+void stampa_vettore(int vettore[], int n){
+    for(int i = 0; i < n; i++){
+        printf("%d \t", vettore[i]);
+    }
+}
+
+int main(){
+    int n = inserimento();
+    int vettore[n];
+    crea_vettore(vettore, n);
+    stampa_vettore(vettore, n);
+
+    int massimo = 0;
+    int minimo = 0;
+    int media = 0;
+
+    massimo = massimo_array(vettore,  n);
+    minimo = minimo_array(vettore, n);
+    media = media_array(vettore, n);
+
+    printf("\nMassimo nel vettore: %d | Minimo nel vettore: %d | Media del vettore: %d", massimo, minimo, media);
+
+    return 0;
 }
 ```
 <hr/>
