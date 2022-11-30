@@ -16,6 +16,7 @@ $ ./file_name
 > ## 1. Scrivere una funzione che ha in input un vettore con tappoe ne determina la media. 
 > La funzione deve restituire la media in formato float.
 >```
+> Esempio:
 > v[0] = 1, v[1] = 5, v[2] = 6, v[3] = 8, v[4] = -1
 > media = (1 + 5 + 8 ) / 3
 >```
@@ -94,6 +95,7 @@ int main(){
 > ## 2. Scrivere una funzione che ha in input un vettore con tappo e determina massimo e minimo. 
 > La funzione non restituisce valori ma deve salvare i valori di massimo e minimo in due variabili ricevute per riferimento.
 >```
+> Esempio:
 > v[0] = 1, v[1] = 5, v[2] = 6, v[3] = 8, v[4] = -1
 > max = 8 e min = 1
 >```
@@ -177,289 +179,188 @@ int main(){
 
 <hr/>
 
-> ## 3. Scrivere un programma che calcola il fattoriale di un numero. Il programma conterra una funzione denominata fatt, che calcola il fattoriale
-> di un numero intero passato come parametro e che restituisce il risultato.
-> Si consiglia di utilizzare il tipo double per il valore di ritorno in quanto la funzione fattoriale cresce molto velocemente.
-> Il calcolo del fattoriale deve essere ottenuto in maniera iterativa (ciclo for o ciclo while).
-> f att(N ) = 1 ∗ 2 ∗ 3 ∗ . . . ∗ (N )
-> f att(0) = 1
+> ## 3. Scrivere una funzione che ha in input un vettore con tappo e un parametro x. 
+> La funzione deve restituire la quantità di elementi del vettore strettamente maggiori di x.
+>```
+> Esempio:
+> v[0] = 1, v[1] = 5, v[2] = 6, v[3] = 8, v[4] = -1
+> se x = 7, allora risultato = 1
+>```
 ```c
 #include <stdio.h>
 
-double calcola_fattoriale(int n){
-    int i = 0 ;
-    for(i = (n-1); i>1; i--){
-        n *= i;
+#define TAPPO -1
+#define LENGTH 10
+
+int* crea_vettore(){
+    int i = 0;
+    static int vet[LENGTH];
+
+    for(i = 0; i < (LENGTH-1); i++){
+        printf("Inserisci il valore [%d]: ", i);
+        scanf(" %d", &vet[i]);
+
+        if(vet[i] == TAPPO){    //una volta inserito il tappo esco dal ciclo.
+            break;
+        }
+
+        if(i == LENGTH-2){  //una volta raggiunta la penultima cella assegno a questa il valore inserito e a quella successiva il tappo
+            vet[LENGTH-1] = TAPPO;
+            break;
+        }
     }
-    return n;
+
+    return vet;
+}
+
+void stampa_vettore(int vettore[]){
+    int i;
+
+    if(vettore[0] == TAPPO){
+        puts("Il vettore é vuoto!");
+    }else{
+        printf("|");
+        for(i = 0; vettore[i] != TAPPO; i++){   //stampo tutti i valori fino al tappo
+            printf("POS: %d => %d |", i, vettore[i]);
+        }
+    }
+}
+
+int maggiori_di_x(int vettore[], int k){
+    int conta = 0;
+
+    if(vettore[0] == TAPPO){
+        puts("Il vettore é vuoto!");
+        return conta;
+    }
+
+    for(int i = 0; vettore[i] != TAPPO; i++){
+        if(vettore[i] > k){
+            conta++;
+        }
+    }
+    return conta;
 }
 
 int main(){
-    int n = -1;
-    double fattoriale = 0;
+    int *v;
+    int x = 5;
+    int n_valori = 0;
 
-     while(n < 0){
-        puts("Inserisci N (MAGGIORE DI 0)");
-        scanf("%d", &n);
-        if(n < 0){
-            puts("Il numero inserito deve essere maggiore di 0!");
-        }
-    }  
+    v = crea_vettore();
+    stampa_vettore(v);
+    n_valori = maggiori_di_x(v, x);
+
+    printf("\n - Il numero di valori maggiori di %d presenti nel vettore sono: %d", x, n_valori);
     
-    fattoriale  = calcola_fattoriale(n);
+    return 0;
+}
+```
 
-    printf("Il fattoriale di %d é: %f", n, fattoriale);
+<hr/>
+
+> ## 4. Scrivere una funzione che ha in input un vettore con tappo, un valore x e restituisce il numero di volte un cui il valore x si
+> ripete nel vettore.
+>```
+> Esempio:
+> v[0] = 1, v[1] = 3, v[2] = 4, v[3] = 5, v[4] = 5, v[5] = -1
+> se x = 5, allora conteggio = 2
+>```
+```c
+#include <stdio.h>
+
+#define TAPPO -1
+#define LENGTH 10
+
+int* crea_vettore(){
+    int i = 0;
+    static int vet[LENGTH];
+
+    for(i = 0; i < (LENGTH-1); i++){
+        printf("Inserisci il valore [%d]: ", i);
+        scanf(" %d", &vet[i]);
+
+        if(vet[i] == TAPPO){    //una volta inserito il tappo esco dal ciclo.
+            break;
+        }
+
+        if(i == LENGTH-2){  //una volta raggiunta la penultima cella assegno a questa il valore inserito e a quella successiva il tappo
+            vet[LENGTH-1] = TAPPO;
+            break;
+        }
+    }
+
+    return vet;
+}
+
+void stampa_vettore(int vettore[]){
+    int i;
+
+    if(vettore[0] == TAPPO){
+        puts("Il vettore é vuoto!");
+    }else{
+        printf("|");
+        for(i = 0; vettore[i] != TAPPO; i++){   //stampo tutti i valori fino al tappo
+            printf("POS: %d => %d |", i, vettore[i]);
+        }
+    }
+}
+
+int ripetizioni_di_x(int vettore[], int x){
+    int conta = 0;
+
+    if(vettore[0] == TAPPO){
+        puts("Il vettore é vuoto!");
+        return conta;
+    }
+
+    for(int i = 0; vettore[i] != TAPPO; i++){
+        if(vettore[i] == x){
+            conta++;
+        }
+    }
+    return conta;
+}
+
+int main(){
+    int *v;
+    int x = 2;
+    int ripetizioni = 0;
+
+    v = crea_vettore();
+    stampa_vettore(v);
+    ripetizioni = ripetizioni_di_x(v, x);
+
+    printf("\n - Il valore %d compare nel vettore %d volte!", x, ripetizioni);
     
     return 0;
 }
 ```
-
 <hr/>
 
-> ## 4. Scrivere un programma che, utilizzando le funzioni, calcoli la media, il massimo e il minimo di un array di numeri reali Utilizzare le funzioni:
-> leggi(): permette di inserire il vettore di numeri 
-> media(): calcola e ritorna la media
-> max(): calcola e ritorna il valore massimo
-> min(): calcola e ritorna il valore minimo
-> stampa(): visualizza il vettore, la media e il massimo e il minimo
+> ## 5. Scrivere una funzione che ha in input un vettore con tappo, un valore x un valore k e restituisce l'eventuale posizione della k-esima occorrenza >di x nel vettore, -1 altrimenti.
+>```
+> Esempio:
+> v[0] = 1, v[1] = 3, v[2] = 4, v[3] = 5, v[4] = 5, v[5] = -1
+> - se x = 5 e k = 2, allora posizione = 4 (il 5 si ripete per la seconda volta in posizione 4).
+> – se x = 4 e k = 2, allora posizione = -1 (il 4 si ripete solo una volta, non due).
+> – se x = 3 e k = 1, allora posizione = 1 (il 2 si ripete solo una volta, in posizione 1).
+>```
+
 ```c
-#include <stdio.h>
-
-int media_array(int vettore[], int lunghezza){
-    int media = 0;
-
-    for(int i = 0; i < lunghezza; i++){
-        media += vettore[i];
-    }
-
-    media = media / lunghezza;
-
-    return media;
-}
-
-int massimo_array(int vettore[], int lunghezza){
-    int massimo = 0;
-
-    for(int i = 0; i < lunghezza; i++){
-        if(vettore[i] > massimo){
-            massimo = vettore[i];
-        }
-    }
-
-    return massimo;
-}
-
-int minimo_array(int vettore[], int lunghezza){
-    int min = 0;
-
-    min = vettore[0]; //altrimenti, visto che é inizializzato a 0 questo rimarrà sempre 0
-
-    for(int i = 0; i < lunghezza; i++){
-        if(vettore[i] < min){
-            min = vettore[i];
-        }
-    }
-
-    return min;
-}
-
-int inserimento(){
-    int aus;
-    puts("\n--------------------");
-    puts("Inserisci N: ");
-    scanf("%d", &aus);
-    puts("--------------------");
-
-    return aus;
-}
-
-int crea_vettore(int vettore[], int lunghezza){
-    int i=0;
-
-    for(i=0; i < lunghezza; i++){
-        printf("Inserisci il [%d] valore: ", i);
-        scanf("%d", &vettore[i]);
-    } 
-    puts("Vettore creato!");
-    return vettore;
-}
-
-void stampa_vettore(int vettore[], int n){
-    for(int i = 0; i < n; i++){
-        printf("%d \t", vettore[i]);
-    }
-}
-
-int main(){
-    int n = inserimento();
-    int vettore[n];
-    crea_vettore(vettore, n);
-    stampa_vettore(vettore, n);
-
-    int massimo = 0;
-    int minimo = 0;
-    int media = 0;
-
-    massimo = massimo_array(vettore,  n);
-    minimo = minimo_array(vettore, n);
-    media = media_array(vettore, n);
-
-    printf("\nMassimo nel vettore: %d | Minimo nel vettore: %d | Media del vettore: %d", massimo, minimo, media);
-
-    return 0;
-}
+EH VOLEVI LA SOLUZIONE
 ```
 <hr/>
 
-> ## 5. Si scriva un programma C che richiami tre funzioni:
-> • Inserimento degli elementi in un vettore X
-> • Funzione cerca, che ricerchi la presenza di un elemento in un vettore di interi.
-> La funzione riceve in ingresso tre parametri:
->   – un vettore di interi v[] nel quale ricercare il valore;
->   – un un valore intero N che indica quanti elementi contiene il vettore;
->   – il valore intero x che deve essere ricercato. 
-> La funzione deve restituire un valore intero, ed in particolare:
->   – se il valore x é presente nel vettore, allora la funzione restituisce l’indice della posizione alla quale si trova tale valore;
->   – se il valore x é presente più volte, si restituisca l’indice della prima occorrenza;
->   – se il valore x non é presente nel vettore, si restituisca -1.
-
+> ## 6. SScrivere una funzione che ha in input un vettore con tappo e restituisce il numero di elementi che sono la somma dei due precedenti.
+>```
+> Esempio:
+> v[0] = 1, v[1] = 3, v[2] = 4, v[3] = 5, v[4] = 5, v[5] = -1
+> allora conteggio = 1 (perché nella posizione 2 c'è 4 che è la somma della posizione 0 e 1 ovvero 1 + 3).
+>```
 
 ```c
-#include <stdio.h>
-
-int inserimento(){
-    int aus;
-    puts("\n--------------------");
-    puts("Inserisci N: ");
-    scanf("%d", &aus);
-    puts("--------------------");
-
-    return aus;
-}
-
-int crea_vettore(int vettore[], int lunghezza){
-    int i=0;
-
-    for(i=0; i < lunghezza; i++){
-        printf("Inserisci il [%d] valore: ", i);
-        scanf("%d", &vettore[i]);
-    } 
-    puts("\nVettore creato!");
-    return vettore;
-}
-
-int cerca(int vettore[], int lunghezza, int trova){
-    int x = -1;
-
-    for(int i = 0; i < lunghezza; i++){
-       if(vettore[i] == trova){
-            return i;
-       }
-    } 
-
-    return x;
-}
- 
-void stampa_vettore(int vettore[], int n){
-    for(int i = 0; i < n; i++){
-        printf("%d \t", vettore[i]);
-    }
-}
-
-int main(){
-    int n = inserimento();
-    int vettore[n];
-    crea_vettore(vettore, n);
-    stampa_vettore(vettore, n);
-
-    int valore_da_trovare = inserimento();
-
-    printf("Risultato funzione cerca: %d", cerca(vettore, n, valore_da_trovare));
-
-    return 0;
-}
+COOMING SOOOOOOOOOON
 ```
 <hr/>
 
-> ## 6. Creare un programma che permetta di cifrare e di decifrare una stringa (considerare solo caratteri minuscoli e senza spazi) attraverso 
-> l’algoritmo di cifratura di Cesare. Ogni lettera del testo in chiaro `e sostituita nel testo cifrato dalla lettera che si trova k posizioni dopo nell > 'alfabeto. 
-> Il numero k rappresenta la chiave (0 < k < 26). Per esempio, con k = 3 : ’a’ diventa ’d’, ’m’ diventa ’p’, ’z’ diventa ’c’. La stringa si decripta eseguendo
-> l’operazione inversa. Si scriva un programma che tramite apposite funzioni permetta di:
->   • inserire la stringa
->   • criptare la stringa
->   • decriptarla
->   • stampare la stringa
-```c
-#include <stdio.h>
-#include <string.h>
-
-void inserimento_stringa(char* s){
-    puts("\n--------------------");
-    puts("Inserisci la Stringa: ");
-    scanf(" %s", s);
-}
-
-int inserimento_valore(){
-    int aus;
-    puts("\n--------------------");
-    puts("Inserisci K: ");
-    scanf("%d", &aus);
-
-    return aus;
-}
- 
-void stampa_stringa(char* string){
-    printf("%s", string);
-}
-
-void cifra(char* stringa, int k){
-    int scarto = 0;
-    int k2 = 0;
-
-    for(int i = 0; i < strlen(stringa); i++){
-        if(stringa[i] + k > 122){
-            scarto = 122 - stringa[i];
-            k2 = k - scarto;
-            stringa[i] = 96 + k2;
-        }else{
-            stringa[i] += k;
-        }
-    }
-
-}
-
-void decifra(char* stringa, int k){
-
-    int scarto = 0;
-    int k2 = 0;
-
-    for(int i = 0; i < strlen(stringa); i++){
-        if(stringa[i] - k < 97){
-            scarto = stringa[i] - 97;
-            k2 = k - scarto;
-            stringa[i] = 122 - k2;
-        }else{
-            stringa[i] -= k;
-        }
-    }
-
-}
-
-int main(){
-    char stringa[100];
-    int k = inserimento_valore();
-
-    inserimento_stringa(stringa);
-
-    cifra(stringa, k);
-    printf("\nstringa cifrata: %s", stringa);
-
-    decifra(stringa, k);
-    printf("\nstringa decifrata: %s", stringa);
-
-
-    return 0;
-}
-
-```
-<hr/>
