@@ -338,7 +338,8 @@ int main(){
 ```
 <hr/>
 
-> ## 5. Scrivere una funzione che ha in input un vettore con tappo, un valore x un valore k e restituisce l'eventuale posizione della k-esima occorrenza >di x nel vettore, -1 altrimenti.
+> ## 5. Scrivere una funzione che ha in input un vettore con tappo, un valore x un valore k e restituisce l'eventuale posizione 
+> della k-esima occorrenza >di x nel vettore, -1 altrimenti.
 >```
 > Esempio:
 > v[0] = 1, v[1] = 3, v[2] = 4, v[3] = 5, v[4] = 5, v[5] = -1
@@ -360,7 +361,7 @@ EH VOLEVI LA SOLUZIONE
 >```
 
 ```c
-COOMING SOOOOOOOOOON
+EH VOLEVI LA SOLUZIONE
 ```
 <hr/>
 
