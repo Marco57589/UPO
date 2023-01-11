@@ -245,85 +245,82 @@ int main(){
 ```
 <hr/>
 
-> ## 6. Creare un programma che permetta di cifrare e di decifrare una stringa (considerare solo caratteri minuscoli e senza spazi) attraverso 
-> l’algoritmo di cifratura di Cesare. Ogni lettera del testo in chiaro `e sostituita nel testo cifrato dalla lettera che si trova k posizioni dopo nell > 'alfabeto. 
-> Il numero k rappresenta la chiave (0 < k < 26). Per esempio, con k = 3 : ’a’ diventa ’d’, ’m’ diventa ’p’, ’z’ diventa ’c’. La stringa si decripta eseguendo
-> l’operazione inversa. Si scriva un programma che tramite apposite funzioni permetta di:
->   • inserire la stringa
->   • criptare la stringa
->   • decriptarla
->   • stampare la stringa
+> ## 5. Scrivere un programma organizzato in quattro funzioni:
+> - caricamento in un vettore con tappo (-1) di una sequenza di voti interi controllando che siano compresi tra 18 e 31 (31 corrisponde a 30 e lode);
+> - stampa del vettore;
+> - calcolo della lunghezza del vettore;
+> - calcolo della media (con decimali) dei voti, conversione della media da scala 30 a scala 110, e incremento della media di 0.25 per ogni lode;
+> - main: invoca le funzioni e stampa la media finale. 
 ```c
 #include <stdio.h>
-#include <string.h>
 
-void inserimento_stringa(char* s){
-    puts("\n--------------------");
-    puts("Inserisci la Stringa: ");
-    scanf(" %s", s);
+#define len 10
+#define tappo -1
+
+void stampa_vettore(int* vettore){
+    int i = 0;
+    for(i = 0; vettore[i] != tappo; i++){
+        printf("\n Voto: %d", vettore[i]);
+    }
 }
 
-int inserimento_valore(){
-    int aus;
-    puts("\n--------------------");
-    puts("Inserisci K: ");
-    scanf("%d", &aus);
+int calcola_lunghezza(int* vettore){
+    int length = 0;
 
-    return aus;
-}
- 
-void stampa_stringa(char* string){
-    printf("%s", string);
+    for(int i = 0; vettore[i] != tappo; i++){
+        length++;
+    }
+
+    return length;
 }
 
-void cifra(char* stringa, int k){
-    int scarto = 0;
-    int k2 = 0;
+void calcola_media(int lunghezza, int* vettore){
+    float media = 0;
 
-    for(int i = 0; i < strlen(stringa); i++){
-        if(stringa[i] + k > 122){
-            scarto = 122 - stringa[i];
-            k2 = k - scarto;
-            stringa[i] = 96 + k2;
+    for(int i = 0; vettore[i] != tappo; i++){
+        if(vettore[i] == 31){
+            media += (30*110) /30;
         }else{
-            stringa[i] += k;
+            media += (vettore[i]*110) /30;
         }
     }
 
-}
+    media =  media/lunghezza;
 
-void decifra(char* stringa, int k){
-
-    int scarto = 0;
-    int k2 = 0;
-
-    for(int i = 0; i < strlen(stringa); i++){
-        if(stringa[i] - k < 97){
-            scarto = stringa[i] - 97;
-            k2 = k - scarto;
-            stringa[i] = 122 - k2;
-        }else{
-            stringa[i] -= k;
+    for(int i = 0; vettore[i] != tappo; i++){
+        if(vettore[i] == 31){
+            media += 0.25;
         }
     }
 
+    printf("\n La media e': %f", media);
 }
 
 int main(){
-    char stringa[100];
-    int k = inserimento_valore();
+    int vettore[len];
+    int num;
 
-    inserimento_stringa(stringa);
+    for(int i = 0; i < len; i++){
+        printf("\nInserisci il voto [%d] che deve essere >= 18 <= 31 (-1) per fermarsi): ", i);
+        scanf("%d", &num);
+        if(num < 18 || num > 31){
+            puts("Il valore deve essere compreso tra 18 e 31");
+            i--;
+        }else{
+            vettore[i] = num;
+        }
 
-    cifra(stringa, k);
-    printf("\nstringa cifrata: %s", stringa);
+        if(num == tappo){
+            vettore[i+1] = tappo;
+            break;
+        }
+    }
 
-    decifra(stringa, k);
-    printf("\nstringa decifrata: %s", stringa);
-
+    stampa_vettore(vettore);
+    int lunghezza = calcola_lunghezza(vettore);
+    calcola_media(lunghezza, vettore);
 
     return 0;
 }
-
 ```
 <hr/>
