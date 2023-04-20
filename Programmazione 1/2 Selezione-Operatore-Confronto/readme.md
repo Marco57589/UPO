@@ -33,7 +33,7 @@ int main(){
         printf("Il numero inserito e' dispari");
     }
 	
-return 0;
+    return 0;
 }
 ```
 
@@ -67,7 +67,7 @@ int main(){
         }
     }
 	
-return 0;
+    return 0;
 }
 ```
 
@@ -95,7 +95,7 @@ int main(){
         printf("b non e' multiplo di a");		
     }
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -122,7 +122,7 @@ int main(){
         printf("Il valore di x e' negativo %d", x);
     }
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -152,7 +152,7 @@ int main(){
         printf("Il valore di n e' negativo\n");
     }
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -166,8 +166,8 @@ int main(){
 int main(){
 
     int n1 = 0;
-	int n2 = 0;
-	int n3 = 0;
+    int n2 = 0;
+    int n3 = 0;
 
     printf("Inserisci N1: ");
     scanf("%d", &n1); 
@@ -186,7 +186,7 @@ int main(){
         printf("Il numero maggiore e' N3");
     }
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -216,7 +216,7 @@ int main(){
         printf("Il raggio deve essere maggiore di 0");
     }    
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -266,7 +266,7 @@ int main(){
 
     printf("Il risultato e': %f", risultato); 
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -317,7 +317,7 @@ int main(){
         printf("il valore della casa e' di %f:", &valore);
     }    
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -339,8 +339,8 @@ int main(){
 int main(){
 
     int a = 0;
-	int b = 0;
-	int c = 0;
+    int b = 0;
+    int c = 0;
     int x = 0;
 	
     float x1 = 0;
@@ -374,7 +374,7 @@ int main(){
         printf("la soluzione x1 e' %f, mentre quella di x2 e' %f: ", x1, x2);
     }   
 	
-	return 0;
+    return 0;
 }
 ```
 
@@ -428,7 +428,7 @@ int main(){
     
     printf("Somma richiesta %d banconote da 50 => %d banconote da 20 => %d", richiesta, b5, b2);  
 	
-	return 0;
+    return 0;
 }
 ```
 
