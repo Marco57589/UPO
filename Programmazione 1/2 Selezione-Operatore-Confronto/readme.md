@@ -33,7 +33,7 @@ int main(){
         printf("Il numero inserito e' dispari");
     }
 	
-	return 0;
+return 0;
 }
 ```
 
@@ -67,7 +67,7 @@ int main(){
         }
     }
 	
-	return 0;
+return 0;
 }
 ```
 
