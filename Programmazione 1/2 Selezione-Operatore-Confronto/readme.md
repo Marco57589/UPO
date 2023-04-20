@@ -19,7 +19,7 @@ $ ./file_name
 #include <stdio.h>
 #include <math.h>
 
-void main(){
+int main(){
 
     int n = 0;
 
@@ -32,7 +32,8 @@ void main(){
     }else{
         printf("Il numero inserito e' dispari");
     }
-
+	
+	return 0;
 }
 ```
 
@@ -44,7 +45,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n1 = 0;
     int n2 = 0;
@@ -58,16 +59,15 @@ void main(){
         printf("N1 e' uguale a N2");
 		
     }else{
-        if(n1 > n2){
-            
-	    printf("N1 e' maggiore di N2");	
+        if(n1 > n2){            
+	    	printf("N1 e' maggiore di N2");	
         }else{
             printf("N2 e' maggiore di N1");
 	    
         }
-	
     }
-
+	
+	return 0;
 }
 ```
 
@@ -79,7 +79,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n1 = 0;
 	int n2 = 0;
@@ -91,12 +91,11 @@ void main(){
 
     if(a % b == 0){
         printf("b e' multiplo a a");
-		
     }else{
-        printf("b non e' multiplo di a");
-		
+        printf("b non e' multiplo di a");		
     }
-
+	
+	return 0;
 }
 ```
 
@@ -110,7 +109,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int x = 0;
 
@@ -119,12 +118,11 @@ void main(){
 
     if(x == 0 || x > 0){
         printf("Il valore di x e' positivo %d", x);
-		
     }else{
         printf("Il valore di x e' negativo %d", x);
-		
     }
-
+	
+	return 0;
 }
 ```
 
@@ -135,26 +133,26 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int x = 0;
 
     printf("Inserisci N: ");
     scanf("%d", &n); 
 
-    if(n >- 1){ //Per noi 0 é un valore positivo
-        printf("Il valore di n e' positivo\n");
-		
-        if(n == 0){
-            printf("Il valore di n e' nullo\n");
-        }
+    if(n > 0){ 
+        printf("Il valore di n e' positivo\n");        
+    }
+	
+	if(n == 0){
+		printf("Il valore di n e' nullo\n");
     }
   
     if(n < 0){
         printf("Il valore di n e' negativo\n");
-		
     }
-
+	
+	return 0;
 }
 ```
 
@@ -165,7 +163,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n1 = 0;
 	int n2 = 0;
@@ -186,8 +184,9 @@ void main(){
 		
     }else{
         printf("Il numero maggiore e' N3");
-		
     }
+	
+	return 0;
 }
 ```
 
@@ -201,7 +200,7 @@ void main(){
 
 #define pg 3.14
 
-void main(){
+int main(){
 
     int raggio = 0;
     float area = 0;
@@ -215,8 +214,9 @@ void main(){
 	
     }else{
         printf("Il raggio deve essere maggiore di 0");
-	
     }    
+	
+	return 0;
 }
 ```
 
@@ -232,7 +232,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n1 = 0;
     int n2 = 0;
@@ -262,10 +262,11 @@ void main(){
 	
     }else{
         printf("operatore non valido");
-	
     }
 
-    printf("Il risultato e': %f", risultato);    
+    printf("Il risultato e': %f", risultato); 
+	
+	return 0;
 }
 ```
 
@@ -284,7 +285,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     float casa = 0;
     float valore = 0;
@@ -314,8 +315,9 @@ void main(){
     }else{
         valore = (casa * 1.20);
         printf("il valore della casa e' di %f:", &valore);
-
     }    
+	
+	return 0;
 }
 ```
 
@@ -334,7 +336,7 @@ void main(){
 #include <stdio.h>
 #include <math.h>
 
-void main(){
+int main(){
 
     int a = 0;
 	int b = 0;
@@ -370,7 +372,9 @@ void main(){
         x2 = (b*-1) - sqrt((b*b) - 4*(a*c)) / (2*a);
 
         printf("la soluzione x1 e' %f, mentre quella di x2 e' %f: ", x1, x2);
-    }    
+    }   
+	
+	return 0;
 }
 ```
 
@@ -408,7 +412,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int richiesta = 0;
     int b5 = 0; //banconote 50
@@ -422,7 +426,9 @@ void main(){
     aus = richiesta-(b5*50);
     b2 = aus / 20;
     
-    printf("Somma richiesta %d banconote da 50 => %d banconote da 20 => %d", richiesta, b5, b2);        
+    printf("Somma richiesta %d banconote da 50 => %d banconote da 20 => %d", richiesta, b5, b2);  
+	
+	return 0;
 }
 ```
 
