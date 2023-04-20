@@ -18,7 +18,7 @@ $ ./file_name
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
 	int b = 0;
 	int h = 0;
@@ -30,14 +30,15 @@ void main(){
 	scanf("%d", b);
 
 
-	if(b>0 && h>0){
-		area = b*h;
+	if((b > 0) && (h > 0)){
+		area = b * h;
 		printf("l'area del triangolo e': %f", area);
 		
 	}else{
 		puts("errore");
 		
 	}
+	return 0;
 
 }
 ```
@@ -62,7 +63,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
 	int l1 = 0;
 	int l2 = 0;
@@ -73,13 +74,14 @@ void main(){
 	printf("inserire l1");
 	scanf("%d",&l2);
 	
-	if(l1 > 0 && l2 > 0){
+	if((l1 > 0) && (l2 > 0)){
 		area = l1 * l2;
 		printf("Lato1 = %d \n Lato2 = %d \n Area = %f  ",l1, l2, area);
 
 	}else{
 		printf("errore")
 	}
+	return 0;
 }
 ```
 
@@ -105,7 +107,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
 	int b1 = 0;
 	int b2 = 0;
@@ -119,13 +121,14 @@ void main(){
 	printf("inserire h");
 	scanf("%d",&h);
 	
-	if(l1 > 0 && l2 > 0 && h > 0){
+	if((l1 > 0) && (l2 > 0) && (h > 0)){
 		area = ( (x+y) * h)  / 2;
 		printf("Base1 = %d \n Base2 = %d \n Altezza = %d \n Area = %f ",b1, b2, h, area);
 
 	}else{
 		printf("errore")
 	}
+	return 0;
 }
 ```
 
@@ -168,8 +171,9 @@ int main(){
 		
     }else{
          printf("L'anno %d non e' bisestile", anno);
-		 
 	}
+	
+	return 0;
 }
 ```
 
