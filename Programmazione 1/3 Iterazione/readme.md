@@ -205,7 +205,6 @@ int main(){
 
     for(int i = n; i>0; i--){
         risultato = risultato * x;
-        printf("%d", risultato);
     }
 
     printf("la potenza di x elevato alla n e': %d", risultato);
