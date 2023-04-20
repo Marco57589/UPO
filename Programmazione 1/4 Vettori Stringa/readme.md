@@ -31,7 +31,7 @@ $ ./file_name
 
 #include <ctype.h>
 
-void main(){
+int main(){
     
     char password[100];
     char errori[] = {'#', ';', '1', 'A', 'a', 'L'}; //carattere speciale, punteggiatura, cifra, maiuscola, minuscola, lunghezza
@@ -39,8 +39,7 @@ void main(){
     int corretto = 0;
     int i,j = 0;
 
-    while(corretto != 6){
-    
+    while(corretto != 6){    
 
         for(j = 0; j < 6; j++){ //reset conrolli
             controlli[j] = 0;
@@ -49,7 +48,6 @@ void main(){
 
         puts("\nInserisci la password");
         scanf("%s", password);
-
 
         for(i = 0; i < strlen(password); i++){
             if(password[i] == '@' || password[i] == '#' || password[i] ==  '*' || password[i] == '$' || password[i] == '%'){
@@ -68,6 +66,7 @@ void main(){
                 controlli[4] = 1;
             }
         }
+        
         if(strlen(password) >= 8){
             controlli[5] = 1;
         }
@@ -83,7 +82,10 @@ void main(){
             }
         }
     }
+    
     puts("Password accettata");
+    
+    return 0;
 }
 ```
 
@@ -98,7 +100,7 @@ void main(){
 #include <stdio.h>
 #include <string.h>
 
-void main(){
+int main(){
     
     char s1[50];
     char s2[50];
@@ -111,7 +113,6 @@ void main(){
     puts("\nInserisci s2");
     scanf(" %[^\n]", s2);
 
-
     for(i = 0; i < strlen(s1); i++){
         s3[i] = s1[i];
     }
@@ -122,6 +123,7 @@ void main(){
 
     printf("La stringa risultate e': %s", s3);
 
+    return 0;
 }
 ```
 
@@ -138,7 +140,7 @@ void main(){
 #include <stdio.h>
 #include <string.h>
 
-void main(){
+int main(){
     
     char s1[100];
     char s2[50];
@@ -148,7 +150,7 @@ void main(){
     puts("\nInserisci s1");
     scanf(" %[^\n]", s1);
 
-    for(i = 0; i < strlen(s1)/2; i++){
+    for(i = 0; i < (strlen(s1)/2); i++){
         s2[i] = s1[i];
         s3[i] = s1[strlen(s1)/2+i];
 
@@ -157,8 +159,10 @@ void main(){
             s3[i] = s1[strlen(s1)/2+i];        
         }
     }
+    
     printf("La stringa iniziale e': %s\ns2: %s \ns3: %s", s1, s2, s3);
-
+    
+    return 0;
 }
 ```
 
@@ -176,7 +180,7 @@ void main(){
 #include <stdio.h>
 #include <string.h>
 
-void main(){
+int main(){
     
     char s1[100];
     char s2[50];
@@ -198,6 +202,8 @@ void main(){
         }
     }
     printf("La stringa iniziale e': %s\ns2: %s \ns3: %s", s1, s2, s3);
+    
+    return 0;
 }
 ```
 <hr/>
@@ -213,7 +219,7 @@ void main(){
 #include <stdio.h>
 #include <string.h>
 
-void main(){
+int main(){
     
     char c;
     int lunghezza = 0;
@@ -240,7 +246,8 @@ void main(){
     }
 
     printf("\nCarattere: %c di lunghezza: %d --> %s", c, lunghezza, s3);
-
+    
+    return 0;
 }
 ```
 <hr/>
