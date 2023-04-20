@@ -18,7 +18,7 @@ $ ./file_name
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n_numeri = 0;
     int n = 0;
@@ -40,6 +40,7 @@ void main(){
 
     printf("Il numero massimo e': %d", n_max);
 
+    return 0;
 }
 ```
 
@@ -51,7 +52,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n_numeri = 0;
     int n = 0;
@@ -75,8 +76,9 @@ void main(){
             }
         }
     }
-    printf("Il numero massimo e': %d, mentre il secondo massimo e': %d", n_max, n_max2);
-
+    printf("Il primo numero massimo e': %d, mentre il secondo massimo e': %d", n_max, n_max2);
+	
+    return 0;
 }
 ```
 
@@ -88,7 +90,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n1 = 0;
 	int n2 = 0;
@@ -105,7 +107,8 @@ void main(){
         printf("b non e' multiplo di a");
 		
     }
-
+    
+    return 0;
 }
 ```
 
@@ -117,7 +120,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n = -1;
     int risultato = 0;
@@ -128,8 +131,9 @@ void main(){
         risultato += n;
     }
 
-    printf("il risultato e': %d", risultato);
-    puts("\n");
+    printf("il risultato e': %d \n", risultato);
+
+    return 0;    
 }
 ```
 
@@ -140,14 +144,15 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     for(int i = 0; i<101; i++){
         if(i%2 == 0){
             printf("valore: %d\n", i);
         }
     }
-
+    
+    return 0;
 }
 ```
 
@@ -158,7 +163,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int x = 0;
     int y = 0;
@@ -176,6 +181,7 @@ void main(){
 
     printf("il prodotto dei numeri e': %d", risultato);
 
+    return 0;
 }
 ```
 
@@ -185,7 +191,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int x = 0;
     int n = 0;
@@ -203,6 +209,8 @@ void main(){
     }
 
     printf("la potenza di x elevato alla n e': %d", risultato);
+    
+    return 0;
 }
 ```
 
@@ -218,7 +226,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n = 0;
     int risultato = 1;
@@ -232,7 +240,8 @@ void main(){
     }
 
     printf("la potenza di x elevato alla n e': %d", risultato);
-
+    
+    return 0;
 }
 ```
 
@@ -277,7 +286,7 @@ void main(){
         scanf("%d", &n);
     }
 
-    for(i=1; i<=n; i++){
+    for(i = 1; i <= n; i++){
         if(n%i == 0){
             printf("%d ", i);
         }else{
@@ -285,9 +294,12 @@ void main(){
         }
         
     }
-    if((n-c)<3){
-        puts("é un numero primo");
+    
+    if((n-c) < 3){
+        puts("È un numero primo");
     }
+    
+    return 0;
 }
 ```
 
@@ -298,7 +310,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     for(int i = 0; i < 200; i++){
         if(i%2 == 0){
@@ -307,6 +319,8 @@ void main(){
             puts("-");
         }
     }
+    
+    return 0;
 }
 ```
 
@@ -339,14 +353,16 @@ void main(){
         scanf("%d", &n);
     }
 
-    for(int i = 0; i<=n; i++){
+    for(int i = 0; i <= n; i++){
         printf(" %d \t", i);
         k++;
         if(k==4){
             puts("\n");
-            k=0;
+            k = 0;
         }
     }
+    
+    return 0;
 }
 ```
 
@@ -376,22 +392,24 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int riga = 0;
     int colonna = 0;
     int n = 0;
     int valore = 0;
-
+    int i = 0;
+    int j = 0;
+    
     puts("Inserisci riga");
     scanf("%d", &riga);
 
     puts("Inserisci colonna");
     scanf("%d", &colonna);
+	
 
-
-    for(int i = 0; i<riga; i++){
-        for(int j = 0; j<colonna; j++){
+    for(i = 0; i < riga; i++){
+        for(int j = 0; j < colonna; j++){
             printf(" %d \t", n);
             n++;
         }
@@ -400,16 +418,17 @@ void main(){
 
     puts("\n");
 
-    for(int i = 0; i<riga; i++){
+    for(i = 0; i < riga; i++){
         puts("\n");
         valore = i;
 
-        for(int j = 0; j<colonna; j++){
+        for(j = 0; j<colonna; j++){
             printf(" %d \t", valore);
             valore += riga;
         }
     }
-
+    
+    return 0;
 }
 ```
 
@@ -428,7 +447,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int riga = 0;
     int colonna = 0;
@@ -440,12 +459,14 @@ void main(){
     scanf("%d", &colonna);
 
 
-    for(int i = 0; i<riga; i++){
-        for(int j = 0; j<colonna; j++){
+    for(int i = 0; i < riga; i++){
+        for(int j = 0; j < colonna; j++){
             printf("X");
         }
         puts("\n"); 
     }
+    
+    return 0;
 }
 ```
 
@@ -457,17 +478,19 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int riga = 10;
     int colonna = 10;
 
-    for(int i = 1; i<riga; i++){
-        for(int j = 1; j<colonna; j++){
+    for(int i = 1; i < riga; i++){
+        for(int j = 1; j < colonna; j++){
             printf("%d \t", i*j);
         }
         puts("\n"); 
     }
+    
+    return 0;
 }
 ```
 
@@ -484,7 +507,7 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int riga = 0;
     int colonna = 0;
@@ -496,8 +519,8 @@ void main(){
     scanf("%d", &colonna);
 
 
-    for(int i = 0; i<riga; i++){
-        for(int j = 0; j<colonna; j++){
+    for(int i = 0; i < riga; i++){
+        for(int j = 0; j < colonna; j++){
             if(i == 0 || i == (riga-1) || j == 0 || j == (colonna-1)){
                 printf("* \t");
             }else{
@@ -506,6 +529,8 @@ void main(){
         }
         printf("\n"); 
     }
+    
+    return 0;
 }
 ```
 
@@ -528,21 +553,21 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
     int n = 0;
 
-     while(n<1){ //controllo input > 0
+     while(n < 1){ //controllo che l'input sia > 0
         puts("Inserisci n: ");
         scanf("%d", &n);
     }
 
 
-    for(int i = 0; i<n; i++){
-        for(int j = 0; j<n; j++){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
             if(i==j){
                 printf("0 \t");
-            }else if(j>i){
+            }else if(j > i){
                 printf("X \t");
             }else{
                 printf("Y \t");
@@ -550,6 +575,8 @@ void main(){
         }
         printf("\n");
     }
+    
+    return 0;
 }
 ```
 
