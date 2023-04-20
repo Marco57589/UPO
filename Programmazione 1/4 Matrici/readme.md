@@ -24,7 +24,8 @@ $ ./file_name
 #include <stdio.h>
 #include <stdlib.h>  
 
-void main(){
+int main(){
+
     int riga = 5;
     int colonna = 5;
     int mat[riga][colonna];
@@ -47,17 +48,19 @@ void main(){
         for(j = 0; j < colonna; j++){
             printf("%d \t", mat[i][j]);
         }
-        puts("");
+        printf("\n");
     }
 
     if(r > riga){
-        puts("JavaIO.IndexOutOfBound"); //per il meme
+        puts("Questa riga non esiste nella matrice");
     }else{
         for(j = 0; j < colonna; j++){
             somma += mat[r][j];
         }
         printf("La somma dei valore nella riga %d e': %d", r, somma);
     }
+    
+    return 0;
 }
 ```
 
@@ -73,7 +76,8 @@ void main(){
 #include <stdio.h>
 #include <stdlib.h>  
 
-void main(){
+int main(){
+
     int riga = 5;
     int colonna = 5;
     int mat[riga][colonna];
@@ -95,17 +99,19 @@ void main(){
         for(j = 0; j < colonna; j++){
             printf("%d \t", mat[i][j]);
         }
-        puts("");
+        printf("\n");
     }
 
-    if(c > riga){
-        puts("JavaIO.IndexOutOfBound");
+    if(c > colonna){
+        puts("Questa colonna non esiste nella matrice");
     }else{
         for(i = 0; i < riga; i++){
             somma += mat[i][c];
         }
         printf("La somma dei valore nella colonna %d e': %d", c, somma);
     }
+    
+    return 0;
 }
 ```
 
@@ -125,7 +131,7 @@ void main(){
 #include <stdio.h>
 #include <stdlib.h>  
 
-void main(){
+int main(){
     int riga = 5;
     int colonna = 5;
     int mat[riga][colonna];
@@ -136,9 +142,8 @@ void main(){
         printf("Inserisci il valore nella riga 0 colonna %d\n", j);
         scanf("%d", &mat[0][j]);
     }
-
-
-    puts("");
+    printf("\n");
+    
     for(i = 1; i < riga; i++){
         for(j = 0; j < colonna; j++){
             mat[i][j] = mat[i-1][j]+1;
@@ -149,9 +154,10 @@ void main(){
         for(j = 0; j < colonna; j++){
             printf("%d \t", mat[i][j]);
         }
-        puts("");
+        printf("\n");
     }
-
+    
+    return 0
 }
 ```
 
@@ -172,7 +178,8 @@ void main(){
 #include <stdio.h>
 #include <stdlib.h>  
 
-void main(){
+int main(){
+
     int riga = 5;
     int colonna = 5;
     int mat[riga][colonna];
@@ -184,8 +191,8 @@ void main(){
         scanf("%d", &mat[0][j]);
     }
 
-
-    puts("");
+    printf("\n");
+    
     for(i = 0; i < riga; i++){
         for(j = 1; j < colonna; j++){
             mat[i][j] = mat[i][j-1]*2;
@@ -196,9 +203,10 @@ void main(){
         for(j = 0; j < colonna; j++){
             printf("%d \t", mat[i][j]);
         }
-        puts("");
+        printf("\n");
     }
 
+    return 0;
 }
 ```
 <hr/>
@@ -215,7 +223,8 @@ void main(){
 #include <stdio.h>
 #include <stdlib.h>  
 
-void main(){
+int main(){
+
     int riga = 3;
     int colonna = 3;
     int mat[riga][colonna];
@@ -233,7 +242,7 @@ void main(){
         for(j = 0; j < colonna; j++){
             printf("%d \t", mat[i][j]);
         }
-        puts("");
+        printf("\n");
     }
 
     puts("Inserisci il valore da cercare");
@@ -253,11 +262,12 @@ void main(){
         }
     }
     
-    if(a != 0 && p==0){
+    if((a != 0) && (p==0)){
         a++;
         puts("Non trovato");
     }
-
+    
+    return 0;
 }
 ```
 <hr/>
@@ -274,7 +284,8 @@ void main(){
 #include <stdio.h>
 #include <stdlib.h>  
 
-void main(){
+int main(){
+
     int riga = 3;
     int colonna = 3;
     int mat[riga][colonna];
@@ -292,7 +303,7 @@ void main(){
         for(j = 0; j < colonna; j++){
             printf("%d \t", mat[i][j]);
         }
-        puts("");
+        printf("\n");
     }
 
     puts("Inserisci il valore da cercare");
@@ -311,9 +322,11 @@ void main(){
         }
     }
     
-    if(a == riga*colonna){
+    if(a == (riga*colonna)){
         puts("Non trovato");
     }
+    
+    return 0;
 
 }
 ```
