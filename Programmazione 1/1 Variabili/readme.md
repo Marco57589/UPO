@@ -22,15 +22,16 @@ $ ./file_name
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 	
-    int x = 0;
+	int x = 0;
 	int y = 0;
-	
+
 	x = 7;
 	y = 3;
 
 	printf("Prodotto: %d", x * y);
+	return 0;
 }
 ```
 
@@ -50,18 +51,19 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
-    int x = 0;
-    int y = 0;
-    int area = 0;
+	int x = 0;
+	int y = 0;
+	int area = 0;
 
-    x = 5;
-    y = 4;
+	x = 5;
+	y = 4;
 
-    area = x * y;
+	area = x * y;
 
-    printf("LatoX: %d \nLatoY: %d \nArea %d\n", x, y, area);
+	printf("LatoX: %d \nLatoY: %d \nArea %d\n", x, y, area);
+	return 0;
 }
 ```
 
@@ -83,20 +85,21 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 
-    int x = 0;
-    int y = 0;
-    int h = 0;
-    float area = 0;
+	int x = 0;
+	int y = 0;
+	int h = 0;
+	float area = 0;
 
-    x = 7;
-    y = 3;
-    h = 5;
+	x = 7;
+	y = 3;
+	h = 5;
 
-    area = ( (x+y) * h)  / 2;
+	area = ( (x+y) * h)  / 2;
 
-    printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
+	printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
+	return 0;
 }
 ```
 
@@ -107,23 +110,24 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 	
-    float x = 0;
-    float y = 0;
-    float h = 0;
-    float area = 0;
-    
-    printf("Inserisci lato 1:");
-    scanf("%f", &x);
-    printf("Inserisci lato 2:");
-    scanf("%f", &y);
-    printf("Inserisci H:");
-    scanf("%f", &h);
+	float x = 0;
+	float y = 0;
+	float h = 0;
+	float area = 0;
 
-    area = ( (x+y) * h)  / 2;
+	printf("Inserisci lato 1:");
+	scanf("%f", &x);
+	printf("Inserisci lato 2:");
+	scanf("%f", &y);
+	printf("Inserisci H:");
+	scanf("%f", &h);
 
-    printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
+	area = ( (x+y) * h)  / 2;
+
+	printf("Base1: %d \nBase2Y: %d \nAltezza %d\nArea: %f", x, y, h, area);
+	return 0;
 }
 ```
 
@@ -134,17 +138,19 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 	
-    float num1 = 0;
-    float num2 = 0;
+	float num1 = 0;
+	float num2 = 0;
 
-    printf("Inserisci num1:");
-    scanf("%f", &num1);
-    printf("Inserisci num2:");
-    scanf("%f", &num2);
+	printf("Inserisci num1:");
+	scanf("%f", &num1);
+	printf("Inserisci num2:");
+	scanf("%f", &num2);
 
-    printf("Num2: %f \nNum1: %f", num2, num1);
+	printf("Num2: %f \nNum1: %f", num2, num1);
+
+	return 0;
 }
 ```
 
@@ -155,35 +161,36 @@ void main(){
 ```c
 #include <stdio.h>
 
-void main(){
+int main(){
 	
-    float num1 = 0;
-    float num2 = 0;
-    float num3 = 0;
-    float num4 = 0;
+	float num1 = 0;
+	float num2 = 0;
+	float num3 = 0;
+	float num4 = 0;
 
-    float somma = 0;
-    float media = 0;
-    float prodotto = 0;
+	float somma = 0;
+	float media = 0;
+	float prodotto = 0;
 
-    printf("Inserisci num1:");
-    scanf("%f", &num1);
-    printf("Inserisci num2:");
-    scanf("%f", &num2);
-    printf("Inserisci num3:");
-    scanf("%f", &num3);
-    printf("Inserisci num4:");
-    scanf("%f", &num4);
+	printf("Inserisci num1:");
+	scanf("%f", &num1);
+	printf("Inserisci num2:");
+	scanf("%f", &num2);
+	printf("Inserisci num3:");
+	scanf("%f", &num3);
+	printf("Inserisci num4:");
+	scanf("%f", &num4);
 	
-//Metodo 1:
-    somma = num1+num2+num3+num4;
-    media = (somma / 4);
-    prodotto = num1 * num2 * num3 * num4;
+	//Metodo 1:
+    	somma = num1+num2+num3+num4;
+    	media = (somma / 4);
+	prodotto = num1 * num2 * num3 * num4;
  
-    printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
+    	printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
 	
-//Metodo 2 (Senza creazione variabili dedicate):
-    printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
-
+	//Metodo 2 (Senza creazione variabili dedicate):
+    	printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
+    
+	return 0;
 }
 ```
