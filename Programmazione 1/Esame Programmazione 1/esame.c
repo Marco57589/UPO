@@ -1,11 +1,3 @@
-/*
-Esame Programmazione 1
-
-- Marco Yuri Papa
-- Matricola: 20051241
-- 14/02/2023
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
