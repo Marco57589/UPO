@@ -52,7 +52,6 @@ int main(){
 #include <stdio.h>
 
 int main(){
-
 	int x = 0;
 	int y = 0;
 	int area = 0;
@@ -86,7 +85,6 @@ int main(){
 #include <stdio.h>
 
 int main(){
-
 	int x = 0;
 	int y = 0;
 	int h = 0;
@@ -110,8 +108,7 @@ int main(){
 ```c
 #include <stdio.h>
 
-int main(){
-	
+int main(){	
 	float x = 0;
 	float y = 0;
 	float h = 0;
@@ -138,8 +135,7 @@ int main(){
 ```c
 #include <stdio.h>
 
-int main(){
-	
+int main(){	
 	float num1 = 0;
 	float num2 = 0;
 
@@ -161,8 +157,7 @@ int main(){
 ```c
 #include <stdio.h>
 
-int main(){
-	
+int main(){	
 	float num1 = 0;
 	float num2 = 0;
 	float num3 = 0;
@@ -180,17 +175,17 @@ int main(){
 	scanf("%f", &num3);
 	printf("Inserisci num4:");
 	scanf("%f", &num4);
-	
+
 	//Metodo 1:
-    somma = num1+num2+num3+num4;
-    media = (somma / 4);
+	somma = num1+num2+num3+num4;
+	media = (somma / 4);
 	prodotto = num1 * num2 * num3 * num4;
- 
-    printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
-	
+
+	printf("Somma: %f \nMedia: %f \nProdotto %f\n", somma, media, prodotto);
+
 	//Metodo 2 (Senza creazione variabili dedicate):
-    printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
-    
+	printf("Somma: %f \nMedia: %f \nProdotto %f\n", (num1+num2+num3+num4), (somma / 4), (num1 * num2 * num3 * num4));
+
 	return 0;
 }
 ```
