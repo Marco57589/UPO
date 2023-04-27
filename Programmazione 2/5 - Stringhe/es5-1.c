@@ -1,7 +1,5 @@
-/*
-Scrivere una funzione oddExtract che accetta una stringa come argomento e restituisce una
-nuova stringa (attraverso parametro) che contiene solo i caratteri in posizione dispari della stringa originale.
-*/
+/* Scrivere una funzione oddExtract che accetta una stringa come argomento e restituisce una
+nuova stringa (attraverso parametro) che contiene solo i caratteri in posizione dispari della stringa originale. */
 
 #include <stdio.h>
 #include <string.h>
@@ -21,7 +19,6 @@ void oddExtract(char string[], char odd_string[]){
 }
 
 int main(){
-
     char string[] = "Cavallo";
     char string2[20];
 

@@ -1,8 +1,6 @@
-/*
-Scrivere una funzione upperExtract che accetta una stringa come argomento e restituisce una nuova stringa (attraverso parametro) che 
+/* Scrivere una funzione upperExtract che accetta una stringa come argomento e restituisce una nuova stringa (attraverso parametro) che 
 contiene solo le parole che iniziano con una lettera maiuscola della stringa originale. 
-Utilizzare le funzioni strtok() e isupper() di string.h e ctype.h
-*/
+Utilizzare le funzioni strtok() e isupper() di string.h e ctype.h */
 
 #include <stdio.h>
 #include <string.h>
