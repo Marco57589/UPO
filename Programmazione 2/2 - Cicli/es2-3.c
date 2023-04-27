@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// numero primo
+//Numero primo
 
 int main(){
     int i = 0;

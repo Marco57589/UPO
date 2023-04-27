@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int miain(){
+int main(){
     int i = 0;
     int numero_da_fattorizzare = 10;
     int fattoriale = 0;
