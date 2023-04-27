@@ -1,4 +1,4 @@
-# 2) Cicli (Sperimentazioni Programmazione 2) #
+# 2) Cicli (Ripasso "Sperimentazioni Programmazione 2") #
 
 
 ## Compilazione file c
