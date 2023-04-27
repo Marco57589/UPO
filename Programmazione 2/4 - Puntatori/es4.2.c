@@ -1,6 +1,5 @@
-//Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce un array (Attraverso argomento) 
-//che continee solo gli elementi pari dell'array originale. Utilizzare il puntatore per accedere agli elementi dell'array.
-
+/* Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce un array (Attraverso argomento) 
+che contine solo gli elementi pari dell'array originale. Utilizzare il puntatore per accedere agli elementi dell'array. */
 
 #include <stdio.h>
 
