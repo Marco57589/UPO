@@ -14,118 +14,65 @@ $ ./alias arg1 arg2 argn
 <br/>
 <hr/>
 
-> ## 1. Calcolare un fattoriale usando un ciclo
+> ## 1. Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce il valore medio dell'array.
 ```c
 #include <stdio.h>
 
-int miain(){
-    int i = 0;
-    int numero_da_fattorizzare = 10;
-    int fattoriale = 0;
+#define DIM 10
 
-    for(i = 0 ; i < numero_da_fattorizzare; i++){
-        fattoriale *= i;
+int avg_value(int size, int array[]){
+    int max = 0;
+    int i = 0;
+    int somma = 0;
+
+    for(i = 0; i < size; i++){
+        somma += array[i];
     }
 
-    printf("Il fattoriale di %d é: %d", numero_da_fattorizzare, fattoriale);
+    return (somma / size);
+}
 
-    return 0;
+int main(){
+    int array[] = {1,5,7,2,3,9,6,7,1,2};
+
+    int max = max_value(DIM, array);
+
+    printf("il valore massimo nel vettore é %d", max);
+
+    return  0;
 }
 ```
 
 <hr/>
 
-> ## 2. Numero di fibonacci
+> ## 2. Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce il valore massimo dell'array.
 
 ```c
-int main(){
-    int i;
-    int lunghezza = 10;
-    int n3 = 0;
-    int n2 = 1;
-    int n1 = 1;
+#include <stdio.h>
 
+#define DIM 10
 
-    printf("\nSequenza di fibonacci per lunghezza %d", lunghezza);
-    for(i = 0; i < lunghezza; i++){
-        n3 = n2 + n1;
-        n1 = n2;
-        n2 = n3;
-
-        printf("\n %d): %d",i,  n3);
-    }
-    puts("\n");
-
-    return 0;
-}
-```
-
-<hr/>
-
-> ## 3. Numero primo
-```c
-int main(){
+int max_value(int size, int array[]){
+    int max = 0;
     int i = 0;
-    int n = 43;
+    int somma = 0;
 
-    if(n > 2){
-        if(n % 2 == 0){
-            if(n == 2){
-                printf("%d é un numero primo", n);
-            }else{
-                printf("%d non é un numero primo", n);
-            }
-        }else{
-            printf("%d é un numero primo", n);
+    for(i = 0; i < size; i++){
+        if(array[i] > max){
+            max = array[i];
         }
-
-    }else{
-        printf("%d non é un numero primo", n);
     }
 
-    return 0;
+    return max;
 }
-```
-
-<hr/>
-
-> ## 4. Trovare la somma delle cifre di un numero
-```c
-int main(){
-
-    int numero = 15; //modificabile
-    int somma_cifre = 0;
-
-    while(numero != 0){
-        somma_cifre += numero % 10;
-        numero /= 10;
-    }
-
-    printf("La somma delle cifre del numero %d é: %d", numero, somma_cifre);
-    
-    return 0;
-}
-```
-<hr/>
-
-> ## 5. Invertire le cifre di un numero
-
-```c
-#include <stdio.h>
 
 int main(){
-    int numero = 15;
-    int numero_invertito = 0;
-    int aus = 0;
+    int array[] = {1,5,7,2,3,9,6,7,1,2};
 
-    while(numero != 0){
-        aus = numero % 10;
-        numero_invertito = numero_invertito * 10 + aus;
-        numero /= 10;
-    }
+    int max = max_value(DIM, array);
 
-    printf("Il numero %d invertito é uguale a: %d", numero, numero_invertito);
+    printf("il valore massimo nel vettore é %d", max);
 
-    return 0;
+    return  0;
 }
 ```
