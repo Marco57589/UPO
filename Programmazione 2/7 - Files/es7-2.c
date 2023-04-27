@@ -1,7 +1,5 @@
-/*
-Scrivere un programma che legga da un file di testo una serie di numeri interi, li inserisca in un array e li scriva 
-su un altro file in ordine inverso (usando le primitive fscanf e fwrite).
-*/
+/* Scrivere un programma che legga da un file di testo una serie di numeri interi, li inserisca in un array e li scriva 
+su un altro file in ordine inverso (usando le primitive fscanf e fwrite). */
 
 #include <stdio.h>
 #include <stdlib.h>

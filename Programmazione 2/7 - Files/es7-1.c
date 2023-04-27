@@ -1,6 +1,5 @@
 //scrivere un programma che legga a un file di testo una serie di numeri interi, li sommmi e stampi il risultato
 
-
 #include <stdio.h>
 
 int main(){

@@ -1,6 +1,4 @@
-/*
-Scrivere un programma che legga da un file di testo una serie di parole e conti quanti volte compare una determinata parola all'interno del file.
-*/
+// Scrivere un programma che legga da un file di testo una serie di parole e conti quanti volte compare una determinata parola all'interno del file.
 
 #include <stdio.h>
 #include <stdlib.h>
