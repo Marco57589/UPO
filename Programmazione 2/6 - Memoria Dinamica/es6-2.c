@@ -1,7 +1,5 @@
-/*
-Scrivere delle funzioni per gestire la creazione di array dinamici (di tipo char). 
-Le funzioni create_array, expand_array, e delete_array, dovranno allocare, espandere e liberare la memoria dell'array.
-*/
+/* Scrivere delle funzioni per gestire la creazione di array dinamici (di tipo char). 
+Le funzioni create_array, expand_array, e delete_array, dovranno allocare, espandere e liberare la memoria dell'array. */
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,12 +1,8 @@
-/*
-Scrivere un programma per allocare un array di interi, con dimensione e valori specificati
-dall'utente, e calcolarne la somma.
-*/
+/* Scrivere un programma per allocare un array di interi, con dimensione e valori specificati
+dall'utente, e calcolarne la somma. */
 
 #include <stdio.h>
 #include <stdlib.h>
-
-
 
 int main(){
     int size = 10;
