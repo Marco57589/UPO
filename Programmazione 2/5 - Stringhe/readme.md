@@ -8,7 +8,7 @@ $ gcc -Wall file_name.c -o alias
 ## Esecuzione
 ```
 $ ./alias (senza argomenti)
-$ ./alias arg1 arg2 argn
+$ ./alias arg1 arg2 argn (con argomenti)
 ```
 
 <br/>
