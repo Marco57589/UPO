@@ -14,8 +14,7 @@ $ ./alias arg1 arg2 argn
 <br/>
 <hr/>
 
-> ## 1. Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce
-il valore massimo e il valore minimo dell'array attraverso due puntatori passati come argomenti.
+> ## 1. Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce il valore massimo e il valore minimo dell'array attraverso due puntatori passati come argomenti.
 ```c
 #include <stdio.h>
 
@@ -50,8 +49,7 @@ int main(){
 
 <hr/>
 
-> ## 2. Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce un array (Attraverso argomento) 
-che contine solo gli elementi pari dell'array originale. Utilizzare il puntatore per accedere agli elementi dell'array.
+> ## 2. Scrivere una funzione che accetta un array di interi e la sua dimensione come argomenti e restituisce un array (Attraverso argomento) che contine solo gli elementi pari dell'array originale. Utilizzare il puntatore per accedere agli elementi dell'array.
 
 ```c
 #include <stdio.h>
