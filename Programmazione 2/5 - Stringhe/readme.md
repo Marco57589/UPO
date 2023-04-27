@@ -15,7 +15,7 @@ $ ./alias arg1 arg2 argn
 <hr/>
 
 > ## 1. Scrivere una funzione oddExtract che accetta una stringa come argomento e restituisce una
-nuova stringa (attraverso parametro) che contiene solo i caratteri in posizione dispari della stringa originale.
+> nuova stringa (attraverso parametro) che contiene solo i caratteri in posizione dispari della stringa originale.
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -49,8 +49,8 @@ int main(){
 <hr/>
 
 > ## 2. Scrivere una funzione upperExtract che accetta una stringa come argomento e restituisce una nuova stringa (attraverso parametro) che 
-contiene solo le parole che iniziano con una lettera maiuscola della stringa originale. 
-Utilizzare le funzioni strtok() e isupper() di string.h e ctype.h 
+> contiene solo le parole che iniziano con una lettera maiuscola della stringa originale. 
+> Utilizzare le funzioni strtok() e isupper() di string.h e ctype.h 
 
 ```c
 #include <stdio.h>
