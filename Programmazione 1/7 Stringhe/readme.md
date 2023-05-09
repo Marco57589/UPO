@@ -146,7 +146,6 @@ int main(){
 > - Visualizza vettore di stringhe;
 > - Ricerca una parola nel vettore, individuando gli indici della prima e ultima occorrenza (-1,-1 se assente);
 > - Main: dichiara un vettore di stringhe (mutabili), chiede all'utente una parola, invoca le altre funzioni e visualizza i risultati della ricerca.
-*/
 ```c
 #include <stdio.h>
 #include <stdlib.h>
