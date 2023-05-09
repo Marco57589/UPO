@@ -13,8 +13,7 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1. Scrivere una funzione che ha in input un vettore con tappoe ne determina la media. 
-> La funzione deve restituire la media in formato float.
+> ## 1. Scrivere una funzione che ha in input un vettore con tappoe ne determina la media. La funzione deve restituire la media in formato float.
 >```
 > Esempio:
 > v[0] = 1, v[1] = 5, v[2] = 6, v[3] = 8, v[4] = -1
@@ -92,8 +91,7 @@ int main(){
 
 <hr/>
 
-> ## 2. Scrivere una funzione che ha in input un vettore con tappo e determina massimo e minimo. 
-> La funzione non restituisce valori ma deve salvare i valori di massimo e minimo in due variabili ricevute per riferimento.
+> ## 2. Scrivere una funzione che ha in input un vettore con tappo e determina massimo e minimo. La funzione non restituisce valori ma deve salvare i valori di massimo e minimo in due variabili ricevute per riferimento.
 >```
 > Esempio:
 > v[0] = 1, v[1] = 5, v[2] = 6, v[3] = 8, v[4] = -1
@@ -179,8 +177,7 @@ int main(){
 
 <hr/>
 
-> ## 3. Scrivere una funzione che ha in input un vettore con tappo e un parametro x. 
-> La funzione deve restituire la quantità di elementi del vettore strettamente maggiori di x.
+> ## 3. Scrivere una funzione che ha in input un vettore con tappo e un parametro x. La funzione deve restituire la quantità di elementi del vettore strettamente maggiori di x.
 >```
 > Esempio:
 > v[0] = 1, v[1] = 5, v[2] = 6, v[3] = 8, v[4] = -1
@@ -259,8 +256,7 @@ int main(){
 
 <hr/>
 
-> ## 4. Scrivere una funzione che ha in input un vettore con tappo, un valore x e restituisce il numero di volte un cui il valore x si
-> ripete nel vettore.
+> ## 4. Scrivere una funzione che ha in input un vettore con tappo, un valore x e restituisce il numero di volte un cui il valore x si ripete nel vettore.
 >```
 > Esempio:
 > v[0] = 1, v[1] = 3, v[2] = 4, v[3] = 5, v[4] = 5, v[5] = -1
@@ -338,8 +334,7 @@ int main(){
 ```
 <hr/>
 
-> ## 5. Scrivere una funzione che ha in input un vettore con tappo, un valore x un valore k e restituisce l'eventuale posizione 
-> della k-esima occorrenza >di x nel vettore, -1 altrimenti.
+> ## 5. Scrivere una funzione che ha in input un vettore con tappo, un valore x un valore k e restituisce l'eventuale posizione della k-esima occorrenza >di x nel vettore, -1 altrimenti.
 >```
 > Esempio:
 > v[0] = 1, v[1] = 3, v[2] = 4, v[3] = 5, v[4] = 5, v[5] = -1
