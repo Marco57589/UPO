@@ -13,9 +13,7 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1. Scrivere un programma che, sfruttando le funzioni, permetta di calcolare l’area di un cerchio o di un quadrato. 
-> L’utente inserisce un numero, dichiarando se si tratta del raggio di un cerchio o del lato di un quadrato.
-> Se l’utente inserisce un numero negativo viene visualizzato un errore, altrimenti il sistema calcola l’area in modo appropriato.
+> ## 1. Scrivere un programma che, sfruttando le funzioni, permetta di calcolare l’area di un cerchio o di un quadrato. L’utente inserisce un numero, dichiarando se si tratta del raggio di un cerchio o del lato di un quadrato. Se l’utente inserisce un numero negativo viene visualizzato un errore, altrimenti il sistema calcola l’area in modo appropriato.
 ```c
 #include <stdio.h>
 
@@ -78,9 +76,7 @@ int main(){
 
 <hr/>
 
-> ## 2. Scrivere un programma che permetta di inserire due vettori lunghi N e
-> stampi un terzo vettore i cui elementi sono la somma degli elementi dei
-> due vettori in input. Il programma utilizza 3 funzioni:
+> ## 2. Scrivere un programma che permetta di inserire due vettori lunghi N e stampi un terzo vettore i cui elementi sono la somma degli elementi dei due vettori in input. Il programma utilizza 3 funzioni:
 > • Inserisci elementi nel vettore
 > • Calcola somma
 > • Stampa vettore
@@ -148,8 +144,7 @@ int main(){
 
 <hr/>
 
-> ## 3. Scrivere un programma che calcola il fattoriale di un numero. Il programma conterra una funzione denominata fatt, che calcola il fattoriale
-> di un numero intero passato come parametro e che restituisce il risultato.
+> ## 3. Scrivere un programma che calcola il fattoriale di un numero. Il programma conterra una funzione denominata fatt, che calcola il fattoriale di un numero intero passato come parametro e che restituisce il risultato.
 > Si consiglia di utilizzare il tipo double per il valore di ritorno in quanto la funzione fattoriale cresce molto velocemente.
 > Il calcolo del fattoriale deve essere ottenuto in maniera iterativa (ciclo for o ciclo while).
 > f att(N ) = 1 ∗ 2 ∗ 3 ∗ . . . ∗ (N )
