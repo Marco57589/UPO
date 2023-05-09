@@ -13,8 +13,7 @@ $ ./file_name
 <br/>
 <hr/>
 
-> ## 1  Scrivere un programma che prenda in input la base e l'altezza di un triangolo. 
->	Se entrambi sono maggiori di 0, allora calcola e visualizza l'area del triangolo altrimenti visualizza un messaggio di errore.
+> ## 1  Scrivere un programma che prenda in input la base e l'altezza di un triangolo. Se entrambi sono maggiori di 0, allora calcola e visualizza l'area del triangolo altrimenti visualizza un messaggio di errore.
 ```c
 #include <stdio.h>
 
