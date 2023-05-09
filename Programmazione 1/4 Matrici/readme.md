@@ -164,9 +164,9 @@ int main(){
 <hr/>
 
 > ## 4. Scrivere un programma che
-- Chiede all'utente di inserire i valori della prima colonna di una matrice;
-- Carica automaticamente le altre colonne in modo che i valori su una colonna siano il doppio dei valori sulla colonna precedente;
-- Visualizza la matrice.
+>- Chiede all'utente di inserire i valori della prima colonna di una matrice;
+>- Carica automaticamente le altre colonne in modo che i valori su una colonna siano il doppio dei valori sulla colonna precedente;
+>- Visualizza la matrice.
 > Esempio:
 > ```
 > 3  6	12
