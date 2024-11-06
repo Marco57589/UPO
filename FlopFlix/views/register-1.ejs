@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- COMPLETATA E RESPONSIVE-->
+<html lang="it">
+<head>
+    <title>Registrati</title>
+    <%- include('partials/head'); %>
+
+    <link href="/css/register_1_style.css" rel="stylesheet">
+	<link href="/css/footer_style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="registerContainer">
+        <div class="registerBg">
+			<div class="overlay"></div>
+
+			<header class="register-header">
+				<a href="/" class="logo">
+					<img id="logo" class="middle-logo" src="../img/logo.png" alt="Logo">
+				</a>
+				<div class="row header-row">
+					<button type="button" class="btn btn-primary dropdown-toggle language-btn mr-3" data-toggle="dropdown">
+						<i class="material-icons">g_translate</i> Italiano 
+					</button>
+					<a type="button" href="login" class="btn-login-small">Accedi</a>
+				</div>
+			</header>
+			
+			<div class="center-block">
+				<div class="register-mail-top">
+					<h1 class="register-title">Goditi FlopFlix sulla tua TV</h1><br>
+					<p class="register-subtitle">Guarda ciò che vuoi ovunque. Disdici quando vuoi.</p>
+					<p class="register-subtitle">Vuoi guardare FlopFlix? Inserisci l'indirizzo email per abbonarti o riattivare il tuo abbonamento.</p>
+					<form method="POST" id="registerForm1" class="needs-validation" action="verify-email" validate>
+						<div class="col-md-6 offset-md-3">
+							<%- include('partials/messages'); %>
+						</div>
+						<div class="form-group">
+							<div class="col-md-8 offset-md-2 center-block">
+								<input id="reg-email-s1" class="register-mail form-control text-white" type="email" placeholder="Indirizzo email" name="email" required></input>
+								<button class="btn btn-email-submit" type="submit">Inizia ></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="popcorn"></div>
+
+		<div class="register-container">
+			<div class="register-info center-block">
+				<div class="col-md-6">
+					<h1 class="register-title">Film, serie TV e tanto altro, senza limiti</h1><br>
+					<p class="register-info-subtitle">Guarda FlopFlix su smart TV, Playstation, Xbox, Chromecast, Apple TV, lettori Blu-ray e molti altri dispositivi..</p>
+				</div>
+				<div class="col-md-6">
+					<img class="register-image" src="img/register/enjoy.png"></img>
+				</div>
+			</div>
+		</div>
+		<div class="register-container">
+			<div class="register-info center-block">
+				<div class="col-md-6">
+					<img class="register-image" src="img/register/watch.png"></img>
+				</div>
+				<div class="col-md-6">
+					<h1 class="register-title">Guarda FlopFlix ovunque</h1><br>
+					<p class="register-info-subtitle">Cellulare, tablet, laptop e TV: scegli tu cosa usare per guardare in streaming film e serie TV senza limiti.</p>
+				</div>
+			</div>
+		</div>
+		<div class="register-container">
+			<div class="register-info center-block">
+				<div class="col-md-6">
+					<h1 class="register-title">Crea profili per i bambini</h1><br>
+					<p class="register-info-subtitle">I bambini scoprono nuove avventure in compagnia dei loro personaggi preferiti in uno spazio tutto loro già incluso nel tuo abbonamento.</p>
+				</div>
+				<div class="col-md-6">
+					<img class="register-image" src="img/register/kids.png"></img>
+				</div>
+			</div>
+		</div>
+		<div class="register-container">
+			<div class="register-info center-block">
+				<div class="col-md-6 p-1">
+					<img class="register-image" src="img/register/download.jpg"></img>
+				</div>
+				<div class="col-md-6">
+					<h1 class="register-title">Scarica le tue serie da guardare offline</h1><br>
+					<p class="register-info-subtitle">Guarda in aereo, sul treno, in astronave...</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="text-white n-footer n-footer-underline">
+			<%- include('partials/footer', type = 4); %>
+		</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- COMPLETATA E RESPONSIVE-->
+<html lang="it">
+<head>
+    <title>Accedi</title>
+    <%- include('partials/head'); %>
+
+    <link href="/css/login_style.css" rel="stylesheet">
+    <link href="/css/footer_style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <header class="login-header">
+        <a href="/" class="logo">
+            <img id="logo" class="middle-logo" src="/img/logo.png" alt="Logo" title="Ciao!, io sono flopy">
+        </a>
+    </header>
+
+    <div class="loginContainer">
+        <div class="loginForm">
+            <p class="form-title">Accedi</p>
+            <%- include('partials/messages'); %>
+            
+            <form id="loginForm" class="needs-validation" action="/login" method="post" novalidate>
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control text-white" name="email" placeholder="Indirizzo email" required>
+                </div>
+                <div class="form-group password-group">
+                    <input id="password" class="form-control text-white" placeholder="Password" name="password" type="password" required>
+                    <i id="show-password" class="material-icons show-password" onclick="togglePassword('password')">visibility_off</i>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-login">Accedi</button>
+                </div>
+                <div class="form-group">
+                    <p class="text-white forgot">Hai dimenticato la password?</p>
+                </div>
+                <div class="form-group rememberMe">
+                    <input type="checkbox" id="ricordami">
+                    <label for="ricordami">Ricordami</label>
+                </div>
+                <div class="form-group first-time-register">
+                    <p class="first-time">Prima volta su FlopFlix? </p>
+                    <a class="text-white" href="register-step-1">Registrati.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="n-footer n-footer-underline">
+        <%- include('partials/footer', type = 3); %>
+    </footer>
+</body>
+</html>

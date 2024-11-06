@@ -1,0 +1,58 @@
+<% result.forEach(function(film, index) { 
+    let titolo = film.titolo.replace(/'/g, "\\'");
+    let descrizione = film.descrizione.replace(/'/g, "\\'");
+    let regista = film.regista.replace(/'/g, "\\'");
+                       
+    let durata = film.durata;
+    if(durata != null)
+        durata = durata+" minuti";
+
+    let limite_eta = film.limeta;
+    limite_eta = (limite_eta == 1) ? "Non adatto ai minori di 18 anni" : "Senza limiti di età";
+
+    let trailer;
+    let filmUrl;
+    let videoParam = "?autoplay=1&mute=1&showinfo=0&loop=1&disablekb=1";
+    let videoId;
+    let videoThumbnail;
+
+    if(film.trailer != null){
+        trailer = film.trailer;
+        videoId = trailer.replace("watch?v=", "").replace("https://www.youtube.com/", "");
+        videoThumbnail = "https://img.youtube.com/vi/"+videoId+"/mqdefault.jpg";  
+    }
+
+    if(videoId === 'null' || videoId === '' || film.trailer === null){
+        trailer = "https://www.youtube.com/embed/GV3HUDMQ-F8" + videoParam;
+        videoThumbnail = "../img/ratio.png"; 
+    }else{
+        trailer = trailer.replace("youtube.com", "youtube.com/embed").replace("watch?v=", "");
+        filmUrl = trailer + videoParam;
+        trailer = trailer + videoParam +'&controls=0';
+    }
+%>
+
+<div id="film-<%= film.id %>" class="card slider-film">
+    <div class="card-body p-0">
+        <img class="card-img-top" src="<%= videoThumbnail %>" alt="<%= titolo %>">
+        <div class="overlay">
+            <br>
+            <h5 class="card-title text-white"><%= film.titolo %> (<%= film.anno_uscita %>)</h5>
+            <p class="preview-buttons">
+            <% if (user) { %>
+                <a class="btn btn-floating text-white" title="Riproduci" onclick="playVideo('<%= filmUrl %>')"><i class="material-icons">play_arrow</i></a>
+                <button class="btn btn-floating text-white like-button" data-film-id="<%= film.id %>" data-liked="<%= likedVideos.includes(film.id) ? 'true' : 'false' %>">
+                    <% if (likedVideos.includes(film.id)) { %>
+                        <i class="material-icons like-icon" title="Rimuovi dai preferiti">favorite</i>
+                    <% } else { %>
+                        <i class="material-icons like-icon" title="Aggiungi ai preferiti">favorite_border</i>
+                    <% } %>
+                </button>
+            <% } %>
+                <a id="openModal" class="btn btn-floating text-white" title="Vai alla pagina del film" onclick="openModal('<%= titolo %>', '<%= descrizione %>','<%= film.anno_uscita %>', '<%= trailer %>', '<%= durata %>', '<%= film.categoria %>', '<%= limite_eta %>', '<%= regista %>','<%= filmUrl %>')"><i class="material-icons">dvr</i></a>
+            </p>
+        </div>
+    </div>
+</div>
+<% }); %>
+

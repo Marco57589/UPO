@@ -1,0 +1,321 @@
+input {
+    color: white;
+    text-align: center;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+::placeholder {
+    color: white !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.immagine {
+    height: 300px;
+    width: 190px;
+    margin: auto;
+}
+
+.hr1 {
+    border: 2px solid red;
+}
+
+.avatar{
+    height: 2em;
+    border-radius: 5px;
+}
+
+#mainFilm{
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    display: inline-block;
+    background-size: cover;
+    background-position: top;
+}
+
+#mainFilm::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1.5));
+    pointer-events: none;
+}
+
+.film-background-1 {
+    background-image: url('/img/banner/endgame.png');
+}
+
+.film-background-2 {
+    background-image: url('/img/banner/justiceleague.png');
+}
+
+.film-background-3 {
+    background-image: url('/img/banner/moneyheist.png');
+}
+
+.film-background-4 {
+    background-image: url('/img/banner/manifest.png');
+}
+
+.film-background-5 {
+    background-image: url('/img/banner/wednesday.png');
+}
+
+.film-background-6 {
+    background-image: url('/img/banner/badgley.png');
+}
+
+#videoContainer {
+    position: relative;
+    z-index: 2 !important;
+    margin-top: -20%;
+    overflow-x: auto;
+}
+
+.film-row {
+    position: relative;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    z-index: 3 !important;
+}
+
+.row-title {
+    position: sticky;
+    top: 0;
+    left: 0;
+    color: #e5e5e5;
+    font-size: 1.7em;
+    font-weight: bold;
+    line-height: 1.25vw;
+    margin: 0px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 2;
+}
+
+.row-title:hover {
+    color: white;
+}
+
+.film-container {
+    position: relative;
+    transform-style: flat;
+    padding-left: 3%;
+    padding-right: 3%;
+    max-height: 20em;
+    margin-bottom: 3%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 5 !important;
+    scrollbar-width: none;
+    width: 100%;
+    justify-content: center; 
+}
+
+.film-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 16.6%;
+    position: relative;
+    transform-style: preserve-3d;
+    background: none !important;
+    border: none;
+    transition: transform width 250ms ease;
+    display: inline-block !important;
+    z-index: 20 !important;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    overflow-y: hidden;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+}
+
+.card:hover {
+    z-index: 30 !important;
+    transform: scale3d(1.25, 1.25, 1) translate(-10px, 0px);
+    transform-origin: center;
+    opacity: 1;
+    transition: transform 200ms;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.667);
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 300ms cubic-bezier(.19,1,.22,1);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    z-index: 10 !important;
+}
+
+.card .buttons,
+.card .category {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.card:hover .buttons,
+.card:hover .category {
+    display: block;
+}
+
+.film-details{
+    color:white;
+    white-space: normal;
+    margin-bottom: 0px;
+}
+
+.icona{
+    vertical-align: middle !important;
+    color: white !important;
+    font-weight: 900;
+    background-color: rgba(64, 63, 63, 0.5);
+    border-radius: 50px;
+    padding: 15%;
+}
+
+.arrow {
+    user-select: none;
+    width: 40px;
+    color: white(250, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    z-index: 70;
+    position: sticky;
+    vertical-align: middle;
+    bottom: 10em;
+}
+
+.arrow:hover{
+    transform: scale(1.5);
+}
+
+.leftArrow {
+    left: 0.2%;
+}
+
+.rightArrow {
+    left: 97.5%;
+}
+
+@media (max-width: 1080px) {
+    .film-container {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .card{
+        width: 30%;
+    }
+    .card:hover {
+        transform: scale3d(1, 1, 1) translate(0px, 0px);
+        transform-origin: center;
+        opacity: 1;
+        transition: transform 200ms;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.667);
+    }
+    .row-title {
+        font-size: 1.5em;
+    }
+    .arrow {
+        width: 35px;
+        padding-top: 3%;
+    }
+    .leftArrow {
+        left: 1%;
+    }
+    .rightArrow {
+        left: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .row-title {
+        font-size: 1.3em;
+        text-align: center;
+    }
+    .card{
+        width: 30%;
+    }
+    .card:hover {
+        transform: scale3d(1, 1, 1) translate(0px, 0px);
+        transform-origin: center;
+        opacity: 1;
+        transition: transform 200ms;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.667);
+    }
+    .film-container {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .arrow {
+        width: 30px;
+        padding-top: 2%;
+    }
+    .leftArrow {
+        left: 2%;
+    }
+    .rightArrow {
+        left: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .row-title {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    .card:hover {
+        transform: scale3d(1, 1, 1) translate(0px, 0px);
+        transform-origin: center;
+        opacity: 1;
+        transition: transform 200ms;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.667);
+    }
+    .film-container {
+        margin-left: 10%;
+    }
+    .arrow {
+        width: 25px;
+    }
+    .leftArrow {
+        left: 0%;
+    }
+    .rightArrow {
+        left: 90%;
+    }
+}

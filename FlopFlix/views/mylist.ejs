@@ -1,0 +1,38 @@
+<!DOCTYPE html><!-- COMPLETATA E RESPONSIVE-->
+<html lang="it">
+<head>
+    <title>La mia lista</title>
+    <%- include('partials/head'); %>
+
+    <link href="/css/page_style.css" rel="stylesheet">
+    <link href="/css/header_style.css" rel="stylesheet">
+    <link href="/css/footer_style.css" rel="stylesheet">
+
+    <script src="/js/header.js"></script>
+</head>
+
+<body id="mainBody">
+    
+    <header class="page-header">
+        <%- include('partials/header'); %>
+    </header>
+
+    <%- include('partials/modal-player'); %>
+
+    <div class="page-container">
+        <h1 class="text-white page-title">La mia lista</h1>
+
+        <div class="filmsContainer" class="row col-md-12">
+            <% if (likedVideos.length > 0) { %> 
+                <%- include('partials/film-card', result=films); %>
+            <% } else { %>
+                <p class="text-center text-white">Non hai ancora messo "mi piace" a nessun video.</p>
+            <% } %>
+        </div>
+    </div>
+
+    <footer class="text-white n-footer">
+        <%- include('partials/footer', type = 1); %>
+    </footer>
+</body>
+</html>

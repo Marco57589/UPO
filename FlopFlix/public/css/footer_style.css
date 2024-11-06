@@ -1,0 +1,100 @@
+footer{
+    outline: none !important;
+}
+
+.page-footer {
+    clear: both;
+    width: 100%;
+    background-color: black;
+    padding: 20px 0;
+}
+
+.footer-fixed{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.n-footer{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+    z-index: 1;
+    opacity: .55;
+}
+
+.n-footer p {
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+}
+
+.n-footer-copyright p {
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
+.n-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.n-footer-underline ul li {
+    text-decoration: underline;
+}
+
+.n-footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+    padding-bottom: 1.5vh;
+    font-size: 13px;
+}
+
+.n-footer-copyright{
+    font-size: 10px;
+}
+
+/** signup **/
+
+.n-footer-signup-container{
+    padding: 5vh 0vh;
+}
+
+.n-footer-signup{
+    background-color: #f3f3f3;
+    color: black;
+    text-align: left;
+    z-index: 1;
+    opacity: 1;
+    font-size: 13px;
+    width: 100%;
+    margin-top: auto;
+
+   /* position: fixed;*/
+    bottom: 0;
+}
+
+.n-footer-signup-top{
+    margin: 0 0 30px;
+    font-size: 1.2em;
+}
+
+.n-footer-signup-color{
+    color: #737373;
+}
+.n-footer-signup p {
+    padding-bottom: 1vh;
+    font-size: 1em;
+}
+
+.n-footer-signup-link{
+    display: inline-block !important;
+    margin-right: 20px !important;
+    padding-bottom: 1.5vh !important;
+    font-size: 13px !important;
+}
+
+.ft-cat{
+    background-color: #141414 !important;
+}

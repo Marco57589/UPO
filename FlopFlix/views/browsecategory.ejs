@@ -1,0 +1,53 @@
+<!DOCTYPE html><!-- COMPLETATA E RESPONSIVE-->
+<html lang="it">
+<head>
+    <title>Sfoglia per categoria</title>
+    <%- include('partials/head'); %>
+
+    <link href="/css/page_style.css" rel="stylesheet">
+    <link href="/css/header_style.css" rel="stylesheet">
+    <link href="/css/footer_style.css" rel="stylesheet">
+
+    <script src="/js/header.js"></script>
+</head>
+
+<body id="mainBody">
+    <header>
+        <%- include('partials/header'); %>
+    </header>
+
+    <div class="form-filtro page-with-filter">
+        <h2 class="text-white">Sfoglia per categoria</h2>
+        <div class="filter-container">
+            <form method="GET" action="/browse-category">
+                <label for="categorySelect" class="text-white">Seleziona una categoria: </label>
+                <select id="categorySelect" name="category" class="form-filtro-cat" onchange="this.form.submit()">
+                    <option value="" selected>Tutti</option>
+                    <% categories.forEach(function(category) { %>
+                        <option value="<%= category.nome_categoria %>" <% if (selectedCategory === category.nome_categoria) { %>selected<% } %>><%= category.nome_categoria %></option>
+                    <% });%>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <%- include('partials/modal-player'); %>
+
+    <div class="page-container"><br>
+        <div class="filmsContainer">
+            <div class="row">
+            <% if (film.length > 0) { %>
+                <%- include('partials/film-card', result=film); %>
+            <% } else if (selectedCategory) { %>
+                <p class="text-center text-white">Non ci sono film presenti di questa categoria.</p>
+            <% } %>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white n-footer">
+        <%- include('partials/footer', type = 1); %>
+    </footer>
+
+</body>
+</html>

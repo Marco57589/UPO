@@ -1,0 +1,302 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+.registerBg {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 62%;
+    background-image: url('../img/form/signup.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.popcorn {
+    position: relative;
+    left: 0;
+    top: -7%;
+    width: 92%;
+    height: 15%;
+    margin: 0 4%;
+    z-index: 2;
+    background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );
+}
+
+.register-mail{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.register-container{
+    position: relative;
+    top: -7%;
+    width: 100%;
+    height: 50%;
+    border-bottom: 8px solid #232323;
+    color: white;
+}
+
+.center-block{
+    position: relative;
+    display: flex;
+    width: 66%;
+    height: 81%;
+    margin: 0 17%;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-info{
+    display: flex;
+}
+
+.register-mail-top{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.register-title{
+    font-size: 4vh;
+    font-weight: 900;
+}
+
+.register-subtitle, .register-info-subtitle {
+    font-size: 2vh;
+    font-weight: 400;
+}
+
+.register-image {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn-email-submit{
+    background: rgb(229, 9, 20) !important;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    width: 35%;
+    margin-left: 1rem;
+    height: 4.5vh;
+    font-size: 2vh;
+    font-weight: 650!important;
+}
+
+.registerContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.register-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2%;
+    width: 100%;
+    z-index: 5;
+    top: 0.75rem;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-right: 17%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 1;
+}
+
+.form-control {
+    border: 0.5px solid #aca8a8 !important;
+    border-radius: 4px !important;
+    color: white;
+    height: 4.5vh;
+    width: 50vh;
+    line-height: 1.5;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+}
+
+.btn-login-small {
+    background: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.5vh;
+    line-height: normal;
+    text-align: center;
+    transition: background 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    height: auto;
+}
+
+.btn-login-small:hover{
+    filter: brightness(0.5);
+    text-decoration: none;
+    color: white !important
+}
+
+.header-button .material-icons{
+    font-size: 1.5rem;
+}
+
+.logo{
+    margin-left: 17%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1080px) {
+    .popcorn {
+        width: 95%;
+        height: 12%; 
+        top: -5%;
+    }
+    .center-block {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .register-image {
+        width: 60%;
+        max-height: 35vh;
+    }
+    .register-title {
+        font-size: 3.5vh;
+    }
+    .register-subtitle, .register-info-subtitle {
+        font-size: 1.8vh;
+    }
+    .btn-email-submit {
+        width: 40%;
+    }
+    .btn-login-small {
+        font-size: 1.6vh;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-header {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto; 
+    }
+    .header-row {
+        justify-content: center;
+        margin: 0;
+    }
+    .popcorn {
+        width: 100%;
+        height: 10%;
+        top: -3%;
+        padding: 0 1rem;
+    }
+    .center-block {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .register-image {
+        width: 80%;
+        max-height: 30vh;
+    }
+    .register-title {
+        font-size: 3vh;
+    }
+    .register-subtitle, .register-info-subtitle {
+        font-size: 1.6vh;
+    }
+    .btn-email-submit {
+        width: 50%;
+        font-size: 1.8vh;
+    }
+    .btn-login-small {
+        font-size: 1.5vh;
+        padding: 0.4rem 0.8rem;
+        width: auto;
+    }
+    .form-control {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popcorn {
+        height: 6%;
+        top: -4%;
+        margin: 0;
+    }
+    .center-block {
+        width: 95%;
+        margin: 0 2.5%;
+    }
+    .register-container{
+        top: 0;
+    }
+    .register-image {
+        width: 90%;
+        max-height: 25vh;
+    }
+    .register-title {
+        font-size: 2.5vh;
+    }
+    .register-subtitle, .register-info-subtitle {
+        font-size: 1.4vh;
+    }
+    .btn-email-submit {
+        width: 70%;
+        font-size: 1.6vh;
+    }
+    .btn-login-small {
+        font-size: 1.4vh;
+        padding: 0.4rem 0.6rem;
+    }
+    .form-control {
+        width: 90%;
+    }
+    .register-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-row {
+        justify-content: center;
+        margin: 0;
+    }
+    .btn-login-small{
+        font-size: 1.6vh;
+        height: 100%;
+    }
+    .logo{
+        margin-left: 5%;
+        max-width: 100%;
+        height: auto;
+    }
+}

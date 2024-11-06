@@ -1,0 +1,199 @@
+html {
+    scroll-behavior: smooth;
+    overscroll-behavior: none !important;
+}
+
+div{
+    scroll-behavior: smooth;
+}
+
+input {
+    text-align: left;
+}
+
+input:focus{
+    outline: none !important;
+}
+
+text {
+    color: white;
+    outline: auto !important;
+}
+
+body {
+    background-color: black !important;
+    outline: none !important;
+}
+
+.body-hide-overflow{
+    overflow: hidden !important;
+}
+
+textarea{
+    outline: none !important;
+}
+
+.textLink {
+    color: white;
+}
+
+.textLink:hover {
+    color: rgb(1, 75, 195);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    min-height: 70px;
+    height: auto;
+    padding: 0px !important;
+    background-color: rgb(20, 20, 20);
+}
+
+.navbar.bg-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.bg-black {
+    background-color: black !important;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-text{
+    font-size: 14px;
+}
+
+.nav-text:hover{
+    color: #b3b3b3 !important;
+}
+
+.btn-secondary.dropdown-toggle{
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.dropdown-menu{
+    border-radius: 0px !important;
+    margin-top: 1em !important;
+    border: 0.5px solid rgb(35, 35, 35) !important;
+    background-color: rgba(11, 11, 11, 0.9) !important;
+    font-size: 1.2vh !important;
+}
+
+.dropdown-align{
+    display: flex;
+    font-size: 1rem;
+}
+
+.dropdown-icon{
+    margin-right: 0.3em;
+}
+
+.dropdown-item:hover{
+    background-color: transparent !important;
+}
+
+.dropdown-item:hover p{
+    text-decoration: underline !important;
+}
+
+.dropdown-hr{
+    border-top: 0.05px solid darkgray;
+    margin: 0.5rem 0rem!important;
+}
+
+#logout{
+    text-align: center !important;
+}
+
+.middle-logo{
+    height: auto;
+    width: 10rem;
+}
+
+.language-btn{
+    text-align: left;
+    color: rgb(255,255,255) !important ;
+    background-color: rgb(21,23,23) !important;
+    border: 1px solid #aca8a8 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+#show-password{
+    top: 50%;
+    right: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.password-group {
+    position: relative;
+}
+
+.card-title{
+    white-space: break-spaces;
+    text-align: center;
+    font-size: 80%;
+}
+
+.avatar{
+    height: 2em;
+    border-radius: 5px;
+}
+
+@keyframes shake-infinite {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.shake-hover {
+    display: inline-block;
+    animation: shake-infinite 1.2s infinite;
+    animation-play-state: paused;
+}
+
+.shake-hover:hover {
+    animation-play-state: running; 
+}
+
+.dropdown-toggle{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.alert-warning{
+    background-color: #eab34f !important;
+    border: none !important;
+    color: black !important;
+}
+
+/* flopy eg*/
+
+.flopy-body{
+  background-image: url('/img/flopyAngry.jpg');
+}
+.flopy-invert{
+    filter: invert(1);
+}
+.flopy-opacity{
+    opacity: 0.4;
+}
+.logo-flopy{
+    vertical-align: middle;
+    padding: 10px;
+    height: 50px; 
+    margin-right: 10px;
+    margin-left: 4.1vh;
+    cursor: help !important;
+}

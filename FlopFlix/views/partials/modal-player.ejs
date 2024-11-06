@@ -1,0 +1,41 @@
+<iframe id="fullScreenVideoOverlay" src="" allowfullscreen></iframe>
+
+<div id="controlBar">
+    <i id="exitFullScreen" class="material-icons" onclick="exitFullScreen()" title="Chiudi il player">close</i>
+</div>
+<i id="showControlsIcon" class="material-icons" onclick="showControls()">arrow_drop_up</i>
+
+<div id="modal" class="modal" name="modal">
+    <div class="modal-dialog modal-lg"> <!-- https://getbootstrap.com/docs/4.2/components/modal/ dimensione -xl o -lg-->
+        <div class="modal-content">
+            <button type="button" class="close text-white py-1" data-dismiss="modal" aria-label="Chiudi" onclick="closeModal('modal')">
+                <span>&times;</span>
+            </button>
+            <div class="modal-body p-0 m-0"> <!-- https://getbootstrap.com/docs/4.0/utilities/embed/ 16by9 é l'aspect ratio-->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="videoPlayer" class="embed-responsive-item" src=""></iframe>
+                </div>
+                <div class="position-absolute px-3 onvideo-info d-flex flex-column">
+                    <h2 id="filmTitle"></h2>
+                    <button id="playButton" class="btn btn-light d-flex align-items-center mt-2 choice-btn" onclick="playVideo('filmUrl')">
+                        <i id="play-video" class="material-icons mr-2">play_arrow</i>
+                        <span id="play-video-txt">Riproduci</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer d-flex flex-column align-items-start px-5 py-4">
+                <div class="p-1 text-white">
+                    <h2 id="filmTitle2"></h2>
+                    <p id="filmDescription"></p>
+                </div>
+                <hr class="modal-hr w-100">
+                <div class="p-1 film-descr">
+                    <p class="text-muted">Creato da: <span id="filmRegista" ></span></p>
+                    <p class="text-muted">Generi: <span id="filmCategory"></span></p>
+                    <p class="text-muted">Durata: <span id="filmDuration"></span></p>
+                    <p class="text-muted">Classificazione per età: <span id="filmLimeta"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

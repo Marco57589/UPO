@@ -1,0 +1,231 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/form/login.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: none;
+    overflow: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.login-header {
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    width: 100%;
+    z-index: 5;
+}
+
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    z-index: 1;
+    padding: 2rem 0;
+}
+
+.loginForm {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 28px 68px;
+    border-radius: 4px;
+    width: 50%;
+    max-width: 450px;
+    z-index: 5;
+}
+
+.form-title {
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    background-color: rgba(70, 70, 70, 0.3) !important;
+    border: 0.5px solid #aca8a8 !important;
+    border-radius: 4px;
+    color: white;
+    height: 3rem;
+    line-height: 1.5;
+    padding: 1rem 1rem;
+}
+
+.form-control:focus{
+    border: 2px solid white;
+}
+
+.btn-login {
+    background: rgb(229, 9, 20) !important;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: rgb(193, 17, 25) !important;
+}
+
+.rememberMe {
+    color: white;
+    text-align: left;
+}
+
+.rememberMe input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forgot{
+    text-align: center;
+}
+.forgot:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.first-time-register{
+    display: flex;
+    text-align: left;
+    white-space: preserve;
+    color:rgba(255,255,255,0.7);
+    margin-bottom: 0px;
+}
+
+#show-password{
+    color:white !important;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+}
+
+input[type="checkbox"] {
+    accent-color: white;
+    color: black;
+}
+
+.logo{
+    margin-left: 17%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1080px) {
+    .login-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginForm {
+        width: 60%;
+    }
+    .form-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .firsttime-register, .forgot {
+        font-size: 1rem;
+    }
+    .logo {
+        margin: 0;
+        text-align: center;
+    }
+    #logo {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginForm {
+        width: 80%;
+        padding: 32px 48px;
+    }
+    .form-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .firsttime-register, .forgot {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .logo {
+        margin: 0;
+        text-align: center;
+    }
+    #logo {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginForm {
+        width: 90%;
+        padding: 24px 34px;
+    }
+    .form-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .show-password {
+        right: 8px;
+    }
+    .form-control {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+    .btn-login {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+    .firsttime-register, .forgot {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .logo {
+        margin: 0;
+        text-align: center;
+    }
+    #logo {
+        max-width: 70%;
+        height: auto;
+    }
+}

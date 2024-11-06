@@ -1,0 +1,20 @@
+<div id="editModal" class="modal-admin position-fixed translate-middle">
+    <div class="modal-admin-content">
+        <span class="close" onclick="closeModal('editModal')">&times;</span>
+        <h2>Modifica Categoria</h2><br>
+        <form id="editForm" class="col-md-12" method="POST" action="/admin/edit-category">
+            <div class="row">
+                <label for="old_categoria">Categoria che vuoi modificare:</label>
+                <p id="oldCategoriaText" class="col-md-8 offset-md-2"></p>
+                <input type="hidden" name="old_nome_categoria" id="oldCategoria" required>
+            </div>
+
+            <div class="row">
+                <label for="editCategoria">Nuovo nome per la categoria:</label>
+                <input type="text" name="new_nome_categoria" id="editCategoria" class="col-md-8 offset-md-2 admin-item admin-input" placeholder="Inserisci il nuovo nome della categoria" pattern=".{2,32}" title="La categoria deve essere da 2 a 32 caratteri senza numeri." required>
+            </div>
+
+            <button type="submit" class="admin-btn">Modifica Categoria</button>
+        </form>
+    </div>
+</div>
